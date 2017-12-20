@@ -1,0 +1,149 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven' // ADD THIS
+group='com.github.xinruzhou'
+version = '1.0'
+
+
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.0"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 27
+        useLibrary 'org.apache.http.legacy'
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : "1",
+                JPUSH_APPKEY : "1", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    lintOptions {
+        baseline file("lint-baseline.xml")
+        checkAllWarnings true
+        warningsAsErrors true
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/README'
+        exclude 'META-INF/README.txt'
+        exclude 'META-INF/readme'
+        exclude 'META-INF/readme.txt'
+
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license'
+        exclude 'META-INF/license.txt'
+
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice'
+        exclude 'META-INF/notice.txt'
+
+        exclude 'META-INF/dependencies'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/DEPENDENCIES.txt'
+
+        exclude 'META-INF/PROPERTIES'
+        exclude 'META-INF/PROPERTIES.txt'
+        exclude 'META-INF/properties'
+        exclude 'META-INF/properties.txt'
+
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/ASL2.0'
+
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/rxjava.properties.txt'
+
+        exclude 'META-INF/RXJAVA.DEPENDENCIES'
+        exclude 'META-INF/RXJAVA.DEPENDENCIES.txt'
+
+        exclude 'META-INF/proguard/**'
+        exclude 'META-INF/*.version'
+    }
+
+/***For Android Studio 3.0+**/
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_8
+//        targetCompatibility JavaVersion.VERSION_1_8
+//    }
+
+}
+
+
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile dep.appcompat
+    compile dep.design
+    //沉浸式状态栏
+    compile dep.barlibrary
+    //极光
+    compile dep.jpush
+    compile dep.jcore
+    //水平数字进度条
+    compile dep.numberprogressbar
+    //loading动画
+    compile dep.AndroidSpinKit
+    compile dep.gson
+    compile files('libs/BmobSDK_3.5.8_20171013.jar')
+    compile dep.rxjava2
+    compile dep.rxandroid2
+    //轮播图
+    compile dep.bgabanner
+    compile files('libs/rxandroid-1.2.0.jar')
+    compile files('libs/rxjava-1.1.6.jar')
+    compile files('libs/tbs_sdk_thirdapp_v3.3.0.1045_43300_sharewithdownload_withoutGame_obfs_20170605_170212.jar')
+    compile dep.okgo
+    //下拉刷新
+    compile dep.SmartRefreshLayout
+    compile dep.SmartRefreshHeader
+    //listview的adapter
+
+    compile dep.ListViewBaseAdapter
+}
+
+
+
+// build a jar with source files
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    failOnError  false
+    source = android.sourceSets.main.java.sourceFiles
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    classpath += configurations.compile
+}
+
+// build a jar with javadoc
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
