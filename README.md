@@ -15,19 +15,19 @@
 <p>在Module的build.gradle中添加如下代码</p>
 <pre>
   <code>
-    compile 'com.github.xinruzhou:bmobLibrary:1.0.7'
+    compile 'com.github.reyreyrey:library:1.0.0'
   </code>
 </pre>
 
 ##使用
-<p>1.复制<a href="https://github.com/xinruzhou/bmobLibrary/blob/master/keys/" title="">签名文件</a>到Module，复制<a href="https://github.com/xinruzhou/bmobLibrary/blob/master/gradle/common_gradle.gradle" title="">common.gradle</a>、<a href="https://github.com/xinruzhou/bmobLibrary/blob/master/gradle/global.gradle" title="">global.gradle</a>和<a href="https://github.com/xinruzhou/bmobLibrary/blob/master/gradle/flavors.gradle" title="">flavors.gradle</a>到项目的gradle文件夹中</p>
+<p>1.复制<a href="https://github.com/reyreyrey/library/blob/master/keys/" title="">签名文件</a>到Module，复制<a href="https://github.com/reyreyrey/library/blob/master/gradle/common_gradle.gradle" title="">common.gradle</a>、<a href="https://github.com/reyreyrey/library/blob/master/gradle/global.gradle" title="">global.gradle</a>和<a href="https://github.com/reyreyrey/library/blob/master/gradle/flavors.gradle" title="">flavors.gradle</a>到项目的gradle文件夹中</p>
 <p>2.修改Module的build.gradle</p>
 <pre>
   <code>
     apply from: '../gradle/common_gradle.gradle'
     dependencies {
         compile fileTree(include: ['*.jar'], dir: 'libs')
-        compile 'com.github.xinruzhou:bmobLibrary:1.0.7'
+        compile 'com.github.xinruzhou:library:1.0.0'
     }
   </code>
 </pre>
@@ -112,4 +112,4 @@
       </code>
 </pre>
 
-<p>5.下拉刷新使用参考<a href="https://github.com/xinruzhou/bmobLibrary/blob/master/app/src/main/java/com/android/bmoblibrary/ui/TrendChartActivity.java" title="TrendChartActivity">TrendChartActivity</a></P>
+<p>5.下拉刷新使用参考<a href="https://github.com/reyreyrey/library/blob/master/app/src/main/java/com/android/bmoblibrary/ui/TrendChartActivity.java" title="TrendChartActivity">TrendChartActivity</a></P>
