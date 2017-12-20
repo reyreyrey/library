@@ -15,7 +15,7 @@
 <p>在Module的build.gradle中添加如下代码</p>
 <pre>
   <code>
-    compile 'com.github.reyreyrey:library:1.0.0'
+    compile 'com.github.reyreyrey:library:1.0.1'
   </code>
 </pre>
 
@@ -114,4 +114,4 @@
 
 <p>5.下拉刷新使用参考<a href="https://github.com/reyreyrey/library/blob/master/app/src/main/java/com/android/bmoblibrary/ui/TrendChartActivity.java" title="TrendChartActivity">TrendChartActivity</a></P>
 <p>6.根据接口检测的方法，参考<a href="https://github.com/reyreyrey/library/blob/master/test/src/main/java/module/com/test/ui/SplashInterfaceCheckActivity.java" title="SplashInterfaceCheckActivity">SplashInterfaceCheckActivity</a></p>
-<p>7.library提供<a href="https://github.com/reyreyrey/library/blob/master/app/src/main/java/com/android/bmoblibrary/base/UIActivity.java" title="UIActivity">UIActivity</a>和<a href="https://github.com/reyreyrey/library/blob/master/app/src/main/java/com/android/bmoblibrary/base/UIBaseFragment.java" title="UIActivity">UIActivity</a></p>
+<p>7.library提供<a href="https://github.com/reyreyrey/library/blob/master/app/src/main/java/com/android/bmoblibrary/base/UIActivity.java" title="UIActivity">UIActivity</a>和<a href="https://github.com/reyreyrey/library/blob/master/app/src/main/java/com/android/bmoblibrary/base/UIBaseFragment.java" title="UIBaseFragment">UIBaseFragment</a></p>
