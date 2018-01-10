@@ -4,9 +4,9 @@ import android.net.Uri;
 import android.text.TextUtils;
 import android.webkit.MimeTypeMap;
 
-import com.android.bmoblibrary.Library;
-import com.android.bmoblibrary.utils.CommonUtils;
-import com.android.bmoblibrary.utils.MD5;
+import com.android.library.Library;
+import com.android.library.utils.CommonUtils;
+import com.android.library.utils.MD5;
 import com.android.webview.x5.download.DownLoad;
 import com.android.webview.x5.tools.MimeType;
 import com.tencent.smtt.export.external.interfaces.WebResourceResponse;
@@ -15,7 +15,6 @@ import com.tencent.smtt.sdk.WebView;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.InputStream;
 
 /**

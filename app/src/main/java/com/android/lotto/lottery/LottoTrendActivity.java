@@ -5,8 +5,8 @@ import android.os.Message;
 import android.text.TextUtils;
 
 
-import com.android.bmoblibrary.R;
-import com.android.bmoblibrary.base.UIActivity;
+import com.android.library.R;
+import com.android.library.base.UIActivity;
 import com.android.lotto.data.TrendData;
 import com.android.lotto.ui.DDTrendChart;
 import com.android.lotto.ui.LottoTrendView;

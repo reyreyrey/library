@@ -3,7 +3,7 @@ package com.android.webview.x5.tools;
 import android.text.TextUtils;
 
 
-import com.android.bmoblibrary.Library;
+import com.android.library.Library;
 
 import org.json.JSONObject;
 

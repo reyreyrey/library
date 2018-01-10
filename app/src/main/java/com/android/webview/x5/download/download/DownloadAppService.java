@@ -8,15 +8,15 @@ import android.content.pm.PackageManager;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 
-import com.android.bmoblibrary.utils.CommonUtils;
+import com.android.library.utils.CommonUtils;
 import com.android.webview.x5.download.DownLoad;
 import com.android.webview.x5.download.DownloadCallback;
 import com.android.webview.x5.tools.file.FileUtils;
 
 import java.io.File;
 
-import static com.android.bmoblibrary.utils.CommonUtils.getInstallIntent;
-import static com.android.bmoblibrary.utils.CommonUtils.getNameFromUrl;
+import static com.android.library.utils.CommonUtils.getInstallIntent;
+import static com.android.library.utils.CommonUtils.getNameFromUrl;
 
 
 public class DownloadAppService extends Service implements DownloadCallback {

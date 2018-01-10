@@ -15,7 +15,7 @@ import android.text.TextPaint;
 import android.text.TextUtils;
 import android.view.MotionEvent;
 
-import com.android.bmoblibrary.R;
+import com.android.library.R;
 import com.android.lotto.interfaces.ITrendChart;
 
 

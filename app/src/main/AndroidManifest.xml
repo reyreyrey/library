@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.bmoblibrary">
+    package="com.android.library">
 
     <!--允许联网 -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -22,15 +22,15 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.TrendChartActivity"
+            android:name="com.android.library.ui.TrendChartActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.WebViewActivity"
+            android:name="com.android.library.ui.WebViewActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.GuideActivity"
+            android:name="com.android.library.ui.GuideActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 

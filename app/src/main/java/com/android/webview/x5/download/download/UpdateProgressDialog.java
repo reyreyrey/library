@@ -13,7 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.android.bmoblibrary.R;
+import com.android.library.R;
 import com.daimajia.numberprogressbar.NumberProgressBar;
 
 

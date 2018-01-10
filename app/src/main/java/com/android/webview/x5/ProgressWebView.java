@@ -11,8 +11,8 @@ import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
-import com.android.bmoblibrary.R;
-import com.android.bmoblibrary.databinding.LayoutWebviewBinding;
+import com.android.library.R;
+import com.android.library.databinding.LayoutWebviewBinding;
 import com.android.webview.x5.clients.IWebChromeClient;
 import com.android.webview.x5.clients.IWebViewClient;
 import com.android.webview.x5.tools.IWebSetting;

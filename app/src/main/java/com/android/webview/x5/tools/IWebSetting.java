@@ -2,7 +2,7 @@ package com.android.webview.x5.tools;
 
 import android.os.Build;
 
-import com.android.bmoblibrary.Library;
+import com.android.library.Library;
 import com.tencent.smtt.sdk.CookieManager;
 import com.tencent.smtt.sdk.WebSettings;
 import com.tencent.smtt.sdk.WebView;

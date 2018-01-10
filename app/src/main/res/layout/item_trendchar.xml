@@ -33,7 +33,7 @@
             android:textSize="14sp" />
     </LinearLayout>
 
-    <com.android.bmoblibrary.views.TrendView
+    <com.android.library.views.TrendView
         android:scrollbars="none"
         android:id="@+id/trendview"
         android:layout_marginTop="3dp"

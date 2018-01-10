@@ -1,7 +1,7 @@
 package com.android.webview.x5.download;
 
-import com.android.bmoblibrary.Library;
-import com.android.bmoblibrary.utils.CommonUtils;
+import com.android.library.Library;
+import com.android.library.utils.CommonUtils;
 import com.android.webview.x5.download.client.ClientManager;
 import com.android.webview.x5.tools.UserAgent;
 import com.android.webview.x5.tools.file.FileUtils;
@@ -18,7 +18,7 @@ import okhttp3.internal.Util;
 import okio.BufferedSink;
 import okio.Okio;
 
-import static com.android.bmoblibrary.utils.CommonUtils.getNameFromUrl;
+import static com.android.library.utils.CommonUtils.getNameFromUrl;
 
 
 public enum DownLoad {
