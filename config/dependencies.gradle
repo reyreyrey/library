@@ -3,6 +3,7 @@ allprojects {
         jcenter()
         mavenCentral()
         maven { url "https://jitpack.io" }
+        maven { url "https://raw.githubusercontent.com/HyphenateInc/Hyphenate-SDK-Android/master/repository" }
     }
 }
 
@@ -48,7 +49,7 @@ ext {
     timber = "4.6.0"
     permissions = "0.9.4"
     parceler = "1.1.9"
-    glide = "4.4.0"
+    glide = "3.6.1"
     leakcanary = "1.5.4"
     multidex = "1.0.1"
     phoenix = "2.0.0"
@@ -100,6 +101,7 @@ ext {
     eventbus = "1.0.5.1"
 
     banner = "1.4.10"
+    hyphenate = "3.3.7"
     dep = [
             banner                  : "com.youth.banner:banner:$banner",
             circleDialog            : "com.mylhyl:circleDialog:$circleDialog",
@@ -194,6 +196,7 @@ ext {
             SmartRefreshLayout      : "com.scwang.smartrefresh:SmartRefreshLayout:$SmartRefresh",
             SmartRefreshHeader      : "com.scwang.smartrefresh:SmartRefreshHeader:$SmartRefresh",
             imagepicker             : "com.lzy.widget:imagepicker:$imagepicker",
+            hyphenate               : "com.hyphenate:hyphenate-sdk:$hyphenate",
 
     ]
     //add other dependency in Array[]

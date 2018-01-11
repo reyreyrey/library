@@ -116,6 +116,9 @@ dependencies {
     //listview的adapter
 
     compile dep.ListViewBaseAdapter
+    compile dep.glide
+
+    compile project(":huanxin")
 }
 
 

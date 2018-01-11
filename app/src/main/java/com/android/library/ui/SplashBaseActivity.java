@@ -9,6 +9,8 @@ import android.widget.ImageView;
 
 import com.android.library.models.BaseModel;
 import com.android.library.models.ControlModel;
+import com.android.library.utils.Cons;
+import com.android.library.utils.GuideTools;
 import com.android.library.utils.OnInterfaceCheckCallback;
 import com.android.library.utils.SplashTools;
 import com.google.gson.Gson;
@@ -21,6 +23,8 @@ import com.lzy.okgo.model.Response;
 
 import java.util.List;
 
+import static com.android.library.utils.Cons.CONTROL_URL;
+
 /**
  * author: Rea.X
  * date: 2017/12/20.
@@ -28,7 +32,7 @@ import java.util.List;
 
 public abstract class SplashBaseActivity extends AppCompatActivity {
     private long timeStamp = 0;
-    private static final String CHECKURL = "http://59.110.228.73/mj/interface/control.php?appid=";
+    private static final String CHECKURL = CONTROL_URL;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -59,7 +63,7 @@ public abstract class SplashBaseActivity extends AppCompatActivity {
                                         ControlModel controlModel = model.getData();
                                         if (controlModel != null && controlModel.isOpen()
                                                 && !TextUtils.isEmpty(controlModel.getUrl())) {
-                                            if (isShowGuide()) {
+                                            if (isShowGuide() && GuideTools.needShowGuide()) {
                                                 GuideActivity.showGuide(SplashBaseActivity.this, controlModel, guideRess());
                                             } else {
                                                 WebViewActivity.load(SplashBaseActivity.this, controlModel.getUrl());

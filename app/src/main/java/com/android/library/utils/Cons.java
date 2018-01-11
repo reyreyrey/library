@@ -21,4 +21,8 @@ public class Cons {
     public static final int PAGE_COUNT = 20;
 
 
+    public static final String BASE_URL = "http://59.110.228.73/mj/interface/";
+
+    public static final String CONTROL_URL = BASE_URL + "control.php?appid=";
+    public static final String USERINFO_URL = BASE_URL + "userinfo.php?userid=";
 }

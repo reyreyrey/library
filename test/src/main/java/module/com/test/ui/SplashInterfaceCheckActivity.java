@@ -6,6 +6,7 @@ import com.android.library.ui.SplashBaseActivity;
 import com.android.library.utils.ResourceUtil;
 
 import module.com.test.BuildConfig;
+import module.com.test.R;
 
 /**
  * author: Rea.X
@@ -22,7 +23,7 @@ public class SplashInterfaceCheckActivity extends SplashBaseActivity{
 
     @Override
     protected String getAppID() {
-        return "1";
+        return "2";
     }
 
 
@@ -34,12 +35,12 @@ public class SplashInterfaceCheckActivity extends SplashBaseActivity{
 
     @Override
     protected boolean isShowGuide() {
-        return false;
+        return true;
     }
 
     @Override
     protected int[] guideRess() {
-        return new int[0];
+        return new int[]{R.drawable.guide_1,R.drawable.guide_2,R.drawable.guide_3,R.drawable.guide_4};
     }
 
 }
