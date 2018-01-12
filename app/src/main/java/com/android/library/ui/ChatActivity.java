@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import com.android.library.R;
 import com.android.library.base.UIActivity;
 import com.android.library.databinding.ActivityChatBinding;
-import com.hyphenate.chat.EMMessage;
 import com.hyphenate.easeui.EaseConstant;
 import com.hyphenate.easeui.ui.EaseChatFragment;
 

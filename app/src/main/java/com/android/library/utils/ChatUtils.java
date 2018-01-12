@@ -1,12 +1,6 @@
 package com.android.library.utils;
 
 import com.hyphenate.chat.EMClient;
-import com.hyphenate.easeui.domain.EaseUser;
-import com.hyphenate.exceptions.HyphenateException;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * Created by wiki on 11/01/2018.

@@ -118,8 +118,7 @@ dependencies {
 
     compile dep.ListViewBaseAdapter
     compile dep.glide
-
-    compile project(":huanxin")
+    compile dep.hyphenate
 
     compile dep.acp
 }

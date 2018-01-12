@@ -1,25 +1,18 @@
 package com.android.library;
 
 import android.app.Application;
-import android.text.TextUtils;
-import android.util.Log;
 
 import com.android.library.models.BaseModel;
 import com.android.library.models.UserModel;
-import com.android.library.utils.SharedPreferencesUtils;
 import com.android.library.utils.UserManager;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMOptions;
 import com.hyphenate.easeui.EaseUI;
 import com.hyphenate.easeui.domain.EaseUser;
-import com.hyphenate.easeui.utils.EaseCommonUtils;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
-
-import java.io.IOException;
 
 import cn.jpush.android.api.JPushInterface;
 

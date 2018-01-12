@@ -2,16 +2,12 @@ package com.android.library.ui;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 
 import com.android.library.R;
 import com.android.library.base.UIActivity;
 import com.android.library.databinding.ActivityChatListBinding;
 
 import com.hyphenate.chat.EMConversation;
-import com.hyphenate.easeui.EaseConstant;
-import com.hyphenate.easeui.domain.EaseUser;
-import com.hyphenate.easeui.ui.EaseContactListFragment;
 import com.hyphenate.easeui.ui.EaseConversationListFragment;
 
 
