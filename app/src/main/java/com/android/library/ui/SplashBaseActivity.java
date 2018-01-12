@@ -17,12 +17,15 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.gyf.barlibrary.BarHide;
 import com.gyf.barlibrary.ImmersionBar;
+import com.hyphenate.chat.EMClient;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
 
 import java.util.List;
 
+import static com.android.library.utils.ChatUtils.isLoggedIn;
+import static com.android.library.utils.ChatUtils.loadAll;
 import static com.android.library.utils.Cons.CONTROL_URL;
 
 /**
@@ -45,7 +48,12 @@ public abstract class SplashBaseActivity extends AppCompatActivity {
         im.setBackgroundResource(getSplashImageRes());
         timeStamp = System.currentTimeMillis();
         query();
+        if(isLoggedIn()){
+            loadAll();
+        }
     }
+
+
 
     private void query() {
         OkGo.<String>get(CHECKURL + getAppID())

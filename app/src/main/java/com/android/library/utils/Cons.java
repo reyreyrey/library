@@ -24,5 +24,5 @@ public class Cons {
     public static final String BASE_URL = "http://59.110.228.73/mj/interface/";
 
     public static final String CONTROL_URL = BASE_URL + "control.php?appid=";
-    public static final String USERINFO_URL = BASE_URL + "userinfo.php?userid=";
+    public static final String USERINFO_URL = BASE_URL + "userinfo.php?user_name=";
 }

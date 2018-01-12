@@ -24,11 +24,11 @@ public class UserManager {
     }
 
     public static void saveOtherUser(UserModel model) {
-        SharedPreferencesUtils.saveObject(Library.get(), model.getUserid(), model);
+        SharedPreferencesUtils.saveObject(Library.get(), model.getUsername(), model);
     }
 
-    public static UserModel getUser(String userid) {
-        Object o = SharedPreferencesUtils.readObject(Library.get(), userid);
+    public static UserModel getUser(String username) {
+        Object o = SharedPreferencesUtils.readObject(Library.get(), username);
         if (o != null)
             return (UserModel) o;
         return null;

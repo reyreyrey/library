@@ -36,8 +36,8 @@
 
 
 ################common###############
- #实体类不参与混淆
--keep class com.jess.arms.widget.** { *; } #自定义控件不参与混淆
+ #å®žä½“ç±»ä¸å‚ä¸Žæ··æ·†
+-keep class com.jess.arms.widget.** { *; } #è‡ªå®šä¹‰æŽ§ä»¶ä¸å‚ä¸Žæ··æ·†
 -keepnames class * implements java.io.Serializable
 -keepattributes Signature
 -keep class **.R$* {*;}
@@ -46,7 +46,7 @@
     public static <fields>;
 }
 
--keepclassmembers enum * {  # 使用enum类型时需要注意避免以下两个方法混淆，因为enum类的特殊性，以下两个方法会被反射调用，
+-keepclassmembers enum * {  # ä½¿ç”¨enumç±»åž‹æ—¶éœ€è¦æ³¨æ„é¿å…ä»¥ä¸‹ä¸¤ä¸ªæ–¹æ³•æ··æ·†ï¼Œå› ä¸ºenumç±»çš„ç‰¹æ®Šæ€§ï¼Œä»¥ä¸‹ä¸¤ä¸ªæ–¹æ³•ä¼šè¢«åå°„è°ƒç”¨ï¼Œ
     public static **[] values();
     public static ** valueOf(java.lang.String);
 }
@@ -413,9 +413,9 @@
 	public <init>(android.content.Context, android.util.AttributeSet, int);
 }
 
-#------------------  下方是共性的排除项目         ----------------
-# 方法名中含有“JNI”字符的，认定是Java Native Interface方法，自动排除
-# 方法名中含有“JRI”字符的，认定是Java Reflection Interface方法，自动排除
+#------------------  ä¸‹æ–¹æ˜¯å…±æ€§çš„æŽ’é™¤é¡¹ç›®         ----------------
+# æ–¹æ³•åä¸­å«æœ‰â€œJNIâ€å­—ç¬¦çš„ï¼Œè®¤å®šæ˜¯Java Native Interfaceæ–¹æ³•ï¼Œè‡ªåŠ¨æŽ’é™¤
+# æ–¹æ³•åä¸­å«æœ‰â€œJRIâ€å­—ç¬¦çš„ï¼Œè®¤å®šæ˜¯Java Reflection Interfaceæ–¹æ³•ï¼Œè‡ªåŠ¨æŽ’é™¤
 
 -keepclasseswithmembers class * {
     ... *JNI*(...);
@@ -437,7 +437,7 @@
 
 
 # # -------------------------------------------
-# # ############### volley混淆 ###############
+# # ############### volleyæ··æ·† ###############
 # # -------------------------------------------
 -keep class com.android.volley.** {*;}
 -keep class com.android.volley.toolbox.** {*;}
@@ -447,12 +447,12 @@
 -keep class com.android.volley.toolbox.HurlStack$* { *; }
 -keep class com.android.volley.toolbox.ImageLoader$* { *; }
 
-# universal-image-loader 混淆
+# universal-image-loader æ··æ·†
 
 -dontwarn com.nostra13.universalimageloader.**
 -keep class com.nostra13.universalimageloader.** { *; }
 
-#  百度定位
+#  ç™¾åº¦å®šä½
 -keep class com.baidu.** {*;}
 -keep class vi.com.** {*;}
 -dontwarn com.baidu.**
@@ -514,40 +514,40 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
-#shrink，测试后发现会将一些无效代码给移除，即没有被显示调用的代码，该选项 表示 不启用 shrink。
+#shrinkï¼Œæµ‹è¯•åŽå‘çŽ°ä¼šå°†ä¸€äº›æ— æ•ˆä»£ç ç»™ç§»é™¤ï¼Œå³æ²¡æœ‰è¢«æ˜¾ç¤ºè°ƒç”¨çš„ä»£ç ï¼Œè¯¥é€‰é¡¹ è¡¨ç¤º ä¸å¯ç”¨ shrinkã€‚
 -dontshrink
-#指定重新打包,所有包重命名,这个选项会进一步模糊包名，将包里的类混淆成n个再重新打包到一个个的package中
+#æŒ‡å®šé‡æ–°æ‰“åŒ…,æ‰€æœ‰åŒ…é‡å‘½å,è¿™ä¸ªé€‰é¡¹ä¼šè¿›ä¸€æ­¥æ¨¡ç³ŠåŒ…åï¼Œå°†åŒ…é‡Œçš„ç±»æ··æ·†æˆnä¸ªå†é‡æ–°æ‰“åŒ…åˆ°ä¸€ä¸ªä¸ªçš„packageä¸­
 -flattenpackagehierarchy
-#优化时允许访问并修改有修饰符的类和类的成员
+#ä¼˜åŒ–æ—¶å…è®¸è®¿é—®å¹¶ä¿®æ”¹æœ‰ä¿®é¥°ç¬¦çš„ç±»å’Œç±»çš„æˆå‘˜
 -allowaccessmodification
-#混淆前后的映射
+#æ··æ·†å‰åŽçš„æ˜ å°„
 -printmapping map.txt
-#不跳过(混淆) jars中的 非public classes   默认选项
+#ä¸è·³è¿‡(æ··æ·†) jarsä¸­çš„ éžpublic classes   é»˜è®¤é€‰é¡¹
 -dontskipnonpubliclibraryclassmembers
-#忽略警告
+#å¿½ç•¥è­¦å‘Š
 -ignorewarnings
-#指定代码的压缩级别
+#æŒ‡å®šä»£ç çš„åŽ‹ç¼©çº§åˆ«
 -optimizationpasses 5
-#不使用大小写混合类名
+#ä¸ä½¿ç”¨å¤§å°å†™æ··åˆç±»å
 -dontusemixedcaseclassnames
-#不去忽略非公共的库类
+#ä¸åŽ»å¿½ç•¥éžå…¬å…±çš„åº“ç±»
 -dontskipnonpubliclibraryclasses
-#不启用优化  不优化输入的类文件
+#ä¸å¯ç”¨ä¼˜åŒ–  ä¸ä¼˜åŒ–è¾“å…¥çš„ç±»æ–‡ä»¶
 -dontoptimize
-#不预校验
+#ä¸é¢„æ ¡éªŒ
 -dontpreverify
-#混淆时是否记录日志
+#æ··æ·†æ—¶æ˜¯å¦è®°å½•æ—¥å¿—
 -verbose
-#混淆时所采用的算法
+#æ··æ·†æ—¶æ‰€é‡‡ç”¨çš„ç®—æ³•
 -optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
-#保护注解
+#ä¿æŠ¤æ³¨è§£
 -renamesourcefileattribute SourceFile
-#保持源文件和行号的信息,用于混淆后定位错误位置
-#保持含有Annotation字符串的 attributes
+#ä¿æŒæºæ–‡ä»¶å’Œè¡Œå·çš„ä¿¡æ¯,ç”¨äºŽæ··æ·†åŽå®šä½é”™è¯¯ä½ç½®
+#ä¿æŒå«æœ‰Annotationå­—ç¬¦ä¸²çš„ attributes
 -keepattributes InnerClasses
 
 -dontwarn org.apache.**
-#保持 任意包名.R类的类成员属性。  即保护R文件中的属性名不变
+#ä¿æŒ ä»»æ„åŒ…å.Rç±»çš„ç±»æˆå‘˜å±žæ€§ã€‚  å³ä¿æŠ¤Ræ–‡ä»¶ä¸­çš„å±žæ€§åä¸å˜
 -keepclassmembers class **.R$* {
     public static <fields>;
 }
@@ -688,13 +688,13 @@
 
 
 
-# glide 的混淆代码
+# glide çš„æ··æ·†ä»£ç 
 -keep public class * implements com.bumptech.glide.module.GlideModule
 -keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
   **[] $VALUES;
   public *;
 }
-# banner 的混淆代码
+# banner çš„æ··æ·†ä»£ç 
 -keep class com.youth.banner.** {
     *;
  }
@@ -739,3 +739,41 @@
 -keep class * implements com.google.gson.TypeAdapterFactory
 -keep class * implements com.google.gson.JsonSerializer
 -keep class * implements com.google.gson.JsonDeserializer
+
+
+
+-dontoptimize
+-dontpreverify
+
+-dontwarn cn.jpush.**
+-keep class cn.jpush.** { *; }
+-keep class * extends cn.jpush.android.helpers.JPushMessageReceiver { *; }
+
+-dontwarn cn.jiguang.**
+-keep class cn.jiguang.** { *; }
+#==================gson && protobuf==========================
+-dontwarn com.google.**
+-keep class com.google.gson.** {*;}
+-keep class com.google.protobuf.** {*;}
+
+
+-keep class org.xmlpull.** {*;}
+-keep class com.baidu.** {*;}
+-keep public class * extends com.umeng.**
+-keep class com.umeng.** { *; }
+-keep class com.squareup.picasso.* {*;}
+
+-keep class com.hyphenate.** {*;}
+-keep class com.hyphenate.chat.** {*;}
+-keep class org.jivesoftware.** {*;}
+-keep class org.apache.** {*;}
+#另外，demo中发送表情的时候使用到反射，需要keep SmileUtils,注意前面的包名，
+#不要SmileUtils复制到自己的项目下keep的时候还是写的demo里的包名
+-keep class com.hyphenate.chatuidemo.utils.SmileUtils {*;}
+
+#2.0.9后加入语音通话功能，如需使用此功能的api，加入以下keep
+-keep class net.java.sip.** {*;}
+-keep class org.webrtc.voiceengine.** {*;}
+-keep class org.bitlet.** {*;}
+-keep class org.slf4j.** {*;}
+-keep class ch.imvs.** {*;}

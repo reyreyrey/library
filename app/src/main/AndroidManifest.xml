@@ -39,6 +39,11 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name="com.android.library.ui.ChatListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
 
         <service android:name="com.android.webview.x5.download.download.DownloadAppService" />
         <provider

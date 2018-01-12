@@ -2,6 +2,7 @@ package com.android.library;
 
 import android.app.Application;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.android.library.models.BaseModel;
 import com.android.library.models.UserModel;
@@ -15,6 +16,7 @@ import com.hyphenate.easeui.EaseUI;
 import com.hyphenate.easeui.domain.EaseUser;
 import com.hyphenate.easeui.utils.EaseCommonUtils;
 import com.lzy.okgo.OkGo;
+import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
 
 import java.io.IOException;
@@ -46,26 +48,15 @@ public class Library {
         EaseUI.getInstance().init(app, options);
         EaseUI.getInstance().setUserProfileProvider(new EaseUI.EaseUserProfileProvider() {
             @Override
-            public EaseUser getUser(String userid) {
-                EaseUser easeUser = new EaseUser(userid);
-                UserModel userModel = UserManager.getUser(userid);
+            public EaseUser getUser(String username) {
+                EaseUser easeUser = new EaseUser(username);
+                UserModel userModel = UserManager.getUser(username);
                 if (userModel != null) {
                     easeUser.setNickname(userModel.getNickname());
                     easeUser.setAvatar(userModel.getPhoto());
                     return easeUser;
                 }
-                try {
-                    okhttp3.Response response = OkGo.<String>get(USERINFO_URL + userid).execute();
-                    String result = response.body().string();
-                    BaseModel<UserModel> model = new Gson().fromJson(result, new TypeToken<BaseModel<UserModel>>() {
-                    }.getType());
-                    UserModel userModel1 = model.getData();
-                    UserManager.saveOtherUser(userModel1);
-                    easeUser.setNickname(userModel1.getNickname());
-                    easeUser.setAvatar(userModel1.getPhoto());
-                    return easeUser;
-                } catch (Exception e) {
-                }
+                requestSaveUserInfo(username);
                 return null;
             }
         });
@@ -83,4 +74,16 @@ public class Library {
     }
 
 
+    public static void requestSaveUserInfo(String username){
+        OkGo.<String>get(USERINFO_URL + username).execute(new StringCallback() {
+            @Override
+            public void onSuccess(Response<String> response) {
+                String result = response.body();
+                BaseModel<UserModel> model = new Gson().fromJson(result, new TypeToken<BaseModel<UserModel>>() {
+                }.getType());
+                UserModel userModel1 = model.getData();
+                UserManager.saveOtherUser(userModel1);
+            }
+        });
+    }
 }

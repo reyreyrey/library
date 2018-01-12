@@ -12,6 +12,7 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 27
+        useLibrary 'org.apache.http.legacy'
         ndk {
             //选择要添加的对应cpu类型的.so库。
             abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86'
@@ -119,6 +120,8 @@ dependencies {
     compile dep.glide
 
     compile project(":huanxin")
+
+    compile dep.acp
 }
 
 

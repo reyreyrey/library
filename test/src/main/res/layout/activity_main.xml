@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="module.com.test.ui.MainActivity">
 
     <Button
@@ -12,5 +13,13 @@
         android:text="聊天"
         android:onClick="chat"
          />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="会话列表"
+        android:onClick="chatList"
+        />
+
 
 </LinearLayout>
