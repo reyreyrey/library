@@ -119,7 +119,7 @@ dependencies {
     compile dep.ListViewBaseAdapter
     compile dep.glide
     compile dep.hyphenate
-
+    compile dep.circleDialog
     compile dep.acp
 }
 

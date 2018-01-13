@@ -19,6 +19,21 @@
     <dimen name="user_img_small">36dp</dimen>
     <dimen name="icon_spacing">4dp</dimen>
 
+    <dimen name="font_size_big">20dp</dimen>
+    <dimen name="font_size_toolbar">20dp</dimen>
+    <dimen name="font_size">16dp</dimen>
+    <dimen name="font_size_small">14dp</dimen>
+    <dimen name="font_size_smaller">12dp</dimen>
+    <dimen name="font_size_smallest">10dp</dimen>
+    <dimen name="gudieview_width">6dp</dimen>
+    <dimen name="gudieview_heigh">6dp</dimen>
+    <dimen name="recorder_font_size">15dp</dimen>
+
+    <dimen name="margin_top">23dp</dimen>
+    <dimen name="font_size_middle">16dp</dimen>
+
+    <dimen name="main_page_icon_size">50dp</dimen>
+
 
 
     <!--走势图中双色球的宽高-->

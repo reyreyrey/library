@@ -51,12 +51,19 @@
             android:name="com.android.library.ui.GuideActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
-
         <activity
             android:name="com.android.library.ui.ChatActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.android.trend.ui.TrendActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
 
+        <activity
+            android:name="com.android.library.ui.LuckPanelActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.android.library.ui.ChatListActivity"
             android:launchMode="singleTask"

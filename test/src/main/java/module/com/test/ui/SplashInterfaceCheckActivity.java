@@ -35,12 +35,12 @@ public class SplashInterfaceCheckActivity extends SplashBaseActivity{
 
     @Override
     protected boolean isShowGuide() {
-        return true;
+        return false;
     }
 
     @Override
     protected int[] guideRess() {
-        return new int[]{R.drawable.guide_1,R.drawable.guide_2,R.drawable.guide_3,R.drawable.guide_4};
+        return null;
     }
 
 }
