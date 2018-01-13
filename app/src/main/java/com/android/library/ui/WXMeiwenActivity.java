@@ -4,6 +4,7 @@ import android.view.View;
 import android.widget.AdapterView;
 
 import com.android.library.adapter.WeixinmeiwenAdapter;
+import com.android.library.base.RefreshActivity;
 import com.android.library.models.WXMeiwen;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

@@ -1,4 +1,4 @@
-package com.android.library.ui;
+package com.android.library.base;
 
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,7 +17,7 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshLoadmoreListener;
  * date: 2017/12/14.
  */
 
-public abstract class RefreshActivity<D> extends UIActivity implements OnRefreshLoadmoreListener,AdapterView.OnItemClickListener {
+public abstract class RefreshFragment<D> extends UIBaseFragment implements OnRefreshLoadmoreListener,AdapterView.OnItemClickListener {
     protected int currentPage = 0;
     protected QuickAdapter<D> adapter;
     protected boolean isRefresh;
@@ -25,22 +25,16 @@ public abstract class RefreshActivity<D> extends UIActivity implements OnRefresh
     protected ListView listView;
     protected TextView emptyView;
 
-    @Override
-    protected int getLayoutId() {
-        return R.layout.activity_refresh_listview;
-    }
 
     @Override
-    protected void init() {
-        listView = (ListView) findViewById(R.id.listview);
+    protected void init(View view) {
+        listView = (ListView) view.findViewById(R.id.listview);
         listView.setOnItemClickListener(this);
-        emptyView = (TextView) findViewById(R.id.emptyView);
-        smartRefreshLayout = (SmartRefreshLayout) findViewById(R.id.refreshLayout);
+        emptyView = (TextView) view.findViewById(R.id.emptyView);
+        smartRefreshLayout = (SmartRefreshLayout) view.findViewById(R.id.refreshLayout);
         smartRefreshLayout.setOnRefreshLoadmoreListener(this);
         adapter = getAdapter();
         listView.setAdapter(adapter);
-        if (needQueryInInit())
-            smartRefreshLayout.autoRefresh();
     }
 
     protected void showEmptyView() {
@@ -88,4 +82,16 @@ public abstract class RefreshActivity<D> extends UIActivity implements OnRefresh
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
     }
+
+    @Override
+    protected void lazyLoad() {
+        if (needQueryInInit())
+            smartRefreshLayout.autoRefresh();
+    }
+
+    @Override
+    protected int getContentView() {
+        return R.layout.activity_refresh_listview;
+    }
+
 }

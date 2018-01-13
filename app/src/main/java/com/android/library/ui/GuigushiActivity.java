@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.AdapterView;
 
 import com.android.library.adapter.GuigushiAdapter;
-import com.android.library.databinding.ActivityRefreshListviewBinding;
+import com.android.library.base.RefreshActivity;
 import com.android.library.models.GuigushiModel;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -22,7 +22,7 @@ import java.util.List;
  * date: 2018/1/5.
  */
 
-public class GuigushiActivity extends RefreshActivity<GuigushiModel.ShowapiResBodyBean.PagebeanBean.ContentlistBean>{
+public class GuigushiActivity extends RefreshActivity<GuigushiModel.ShowapiResBodyBean.PagebeanBean.ContentlistBean> {
     private GuigushiAdapter adapter;
 
     private List<String> types;

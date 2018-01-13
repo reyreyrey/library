@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.AdapterView;
 
 import com.android.library.adapter.ManhuaAdapter;
+import com.android.library.base.RefreshActivity;
 import com.android.library.models.ManhuaModel;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

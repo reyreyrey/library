@@ -1,6 +1,7 @@
 package com.android.library.ui;
 
 import com.android.library.adapter.TrendChartAdapter;
+import com.android.library.base.RefreshActivity;
 import com.android.library.models.CaiPiaoModel;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

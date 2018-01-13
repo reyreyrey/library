@@ -6,6 +6,7 @@ import android.widget.AdapterView;
 
 
 import com.android.library.adapter.XiaohuaAdapter;
+import com.android.library.base.RefreshActivity;
 import com.android.library.models.XiaohuaModel;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

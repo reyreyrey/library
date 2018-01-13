@@ -127,6 +127,7 @@ dependencies {
     compile dep.circleimageview
     //瀑布流
     compile dep.pullloadmorerecyclerview
+    compile dep.imagepicker
 }
 
 
