@@ -10,7 +10,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 
-import com.android.mj.tools.MyAnimationUtils;
+import com.android.library.utils.MyAnimationUtils;
 
 
 /**
