@@ -56,6 +56,50 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
+        android:name="com.android.library.ui.XiaohuaActivity"
+        android:launchMode="singleTask"
+        android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.android.library.ui.ManhuaDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.android.library.ui.ManhuaListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.android.library.ui.WXMeiwenActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.android.library.ui.XiaohuaDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.android.library.ui.GuigushiActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.android.library.ui.GuigushiDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.android.library.ui.ArtActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.android.library.ui.FuliActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name="com.android.trend.ui.TrendActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />

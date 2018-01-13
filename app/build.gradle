@@ -121,6 +121,12 @@ dependencies {
     compile dep.hyphenate
     compile dep.circleDialog
     compile dep.acp
+
+    compile dep.PhotoView
+    //圆形imageview
+    compile dep.circleimageview
+    //瀑布流
+    compile dep.pullloadmorerecyclerview
 }
 
 

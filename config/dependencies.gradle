@@ -99,9 +99,10 @@ ext {
     SmartRefresh = "1.0.3"
     imagepicker = "0.6.1"
     eventbus = "1.0.5.1"
-
+    PhotoView = "2.1.3"
     banner = "1.4.10"
     hyphenate = "3.3.7"
+    pullloadmorerecyclerview = "1.1.2"
     dep = [
             banner                  : "com.youth.banner:banner:$banner",
             circleDialog            : "com.mylhyl:circleDialog:$circleDialog",
@@ -197,6 +198,8 @@ ext {
             SmartRefreshHeader      : "com.scwang.smartrefresh:SmartRefreshHeader:$SmartRefresh",
             imagepicker             : "com.lzy.widget:imagepicker:$imagepicker",
             hyphenate               : "com.hyphenate:hyphenate-sdk:$hyphenate",
+            PhotoView               : "com.github.chrisbanes:PhotoView:$PhotoView",
+            pullloadmorerecyclerview: "com.wuxiaolong.pullloadmorerecyclerview:library:$pullloadmorerecyclerview",
 
     ]
     //add other dependency in Array[]

@@ -17,7 +17,7 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshLoadmoreListener;
  * date: 2017/12/14.
  */
 
-public abstract class RefreshActivity< D> extends UIActivity implements OnRefreshLoadmoreListener,AdapterView.OnItemClickListener {
+public abstract class RefreshActivity<D> extends UIActivity implements OnRefreshLoadmoreListener,AdapterView.OnItemClickListener {
     protected int currentPage = 0;
     protected QuickAdapter<D> adapter;
     protected boolean isRefresh;
