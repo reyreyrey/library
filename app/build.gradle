@@ -128,6 +128,7 @@ dependencies {
     //瀑布流
     compile dep.pullloadmorerecyclerview
     compile dep.imagepicker
+    compile dep.banner
 }
 
 
