@@ -91,7 +91,7 @@ public abstract class RefreshFragment<D> extends UIBaseFragment implements OnRef
 
     @Override
     protected int getContentView() {
-        return R.layout.activity_refresh_listview;
+        return R.layout.fragment_refresh_listview;
     }
 
 }

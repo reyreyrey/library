@@ -129,6 +129,8 @@ dependencies {
     compile dep.pullloadmorerecyclerview
     compile dep.imagepicker
     compile dep.banner
+    compile dep.eventbus
+    compile dep.viewcore
 }
 
 
