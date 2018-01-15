@@ -1,5 +1,6 @@
 # bmobLibrary
-[![](https://jitpack.io/v/reyreyrey/library.svg)](https://jitpack.io/#reyreyrey/library)
+<p>[![](https://jitpack.io/v/reyreyrey/library.svg)](https://jitpack.io/#reyreyrey/library)</p>
+
 ##引入
 <p>在项目的build.gradle中添加如下代码</p>
 <pre>
@@ -16,7 +17,8 @@
 <p>在Module的build.gradle中添加如下代码</p>
 <pre>
   <code>
-    compile 'com.github.reyreyrey:library:+
+  //加号替换为jitpack版本号
+    compile 'com.github.reyreyrey:library:+'
   </code>
 </pre>
 
@@ -37,6 +39,7 @@
     apply from: '../gradle/common_gradle.gradle'
     dependencies {
         compile fileTree(include: ['*.jar'], dir: 'libs')
+        //加号替换为jitpack版本号
         compile 'com.github.xinruzhou:library:+'
     }
   </code>
@@ -88,7 +91,7 @@
 <pre>
   <code>
         //配置应用的图标
-       android:icon="@mipmap/你的logo图"
+       android:icon="${app_icon}"
        //将你的SplashActivity配置为启动Activity
   </code>
 </pre>
