@@ -17,29 +17,28 @@ public class SplashInterfaceCheckActivity extends SplashBaseActivity{
 
     @Override
     protected void toMain() {
+        //跳转到主界面
         startActivity(new Intent(this, MainActivity.class));
         finish();
     }
-
     @Override
     protected String getAppID() {
+        //返回在后台添加的appid
         return "2";
     }
-
-
-
     @Override
     protected int getSplashImageRes() {
+        //无需修改
         return ResourceUtil.getDrawableId(this, BuildConfig.SPLASH_PIC);
     }
-
     @Override
     protected boolean isShowGuide() {
+        //是否显示引导页（开关开启的时候才会读这个配置）
         return false;
     }
-
     @Override
     protected int[] guideRess() {
+        //引导页图片资源数组
         return null;
     }
 
