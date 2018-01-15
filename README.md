@@ -1,5 +1,6 @@
 # bmobLibrary
-<p>[![](https://jitpack.io/v/reyreyrey/library.svg)](https://jitpack.io/#reyreyrey/library)</p>
+[![](https://jitpack.io/v/reyreyrey/library.svg)](https://jitpack.io/#reyreyrey/library)
+</br>
 
 ##引入
 <p>在项目的build.gradle中添加如下代码</p>
