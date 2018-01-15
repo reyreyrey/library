@@ -1,5 +1,7 @@
 package com.android.library.models;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -8,14 +10,11 @@ import java.util.List;
  */
 
 public class XiaohuaModel implements Serializable{
-    /**
-     * showapi_res_code : 0
-     * showapi_res_error :
-     * showapi_res_body : {"allNum":933,"allPages":47,"contentlist":[{"ct":"　2015-07-10 05:54:00.000","text":"　　男生拉着女生沮丧着脸说，再给我一次机会，求求你！说好不提分手的！<br />\r\n　　女生甩开男孩的手说：你TM现在在我心里就是个菩萨，除了拜拜我什么都不想做。","title":"你TM现在在我心里就是个菩萨"}],"currentPage":1,"maxResult":20}
-     */
-
+    @SerializedName("showapi_res_code")
     private int showapi_res_code;
+    @SerializedName("showapi_res_error")
     private String showapi_res_error;
+    @SerializedName("showapi_res_body")
     private ShowapiResBodyBean showapi_res_body;
 
     public int getShowapi_res_code() {
@@ -43,18 +42,15 @@ public class XiaohuaModel implements Serializable{
     }
 
     public static class ShowapiResBodyBean  implements Serializable{
-        /**
-         * allNum : 933
-         * allPages : 47
-         * contentlist : [{"ct":"　2015-07-10 05:54:00.000","text":"　　男生拉着女生沮丧着脸说，再给我一次机会，求求你！说好不提分手的！<br />\r\n　　女生甩开男孩的手说：你TM现在在我心里就是个菩萨，除了拜拜我什么都不想做。","title":"你TM现在在我心里就是个菩萨"}]
-         * currentPage : 1
-         * maxResult : 20
-         */
-
+        @SerializedName("allNum")
         private int allNum;
+        @SerializedName("allPages")
         private int allPages;
+        @SerializedName("currentPage")
         private int currentPage;
+        @SerializedName("maxResult")
         private int maxResult;
+        @SerializedName("contentlist")
         private List<ContentlistBean> contentlist;
 
         public int getAllNum() {
@@ -98,15 +94,11 @@ public class XiaohuaModel implements Serializable{
         }
 
         public static class ContentlistBean  implements Serializable{
-            /**
-             * ct : 　2015-07-10 05:54:00.000
-             * text : 　　男生拉着女生沮丧着脸说，再给我一次机会，求求你！说好不提分手的！<br />
-             　　女生甩开男孩的手说：你TM现在在我心里就是个菩萨，除了拜拜我什么都不想做。
-             * title : 你TM现在在我心里就是个菩萨
-             */
-
+            @SerializedName("ct")
             private String ct;
+            @SerializedName("text")
             private String text;
+            @SerializedName("title")
             private String title;
 
             public String getCt() {

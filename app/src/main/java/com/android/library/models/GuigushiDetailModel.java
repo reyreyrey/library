@@ -1,5 +1,7 @@
 package com.android.library.models;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 /**
@@ -8,14 +10,12 @@ import java.io.Serializable;
  */
 
 public class GuigushiDetailModel implements Serializable{
-    /**
-     * showapi_res_code : 0
-     * showapi_res_error :
-     * showapi_res_body : {"allPages":1,"currentPage":"1","ret_code":0,"text":" 啊！尖叫声中，水鬼再次被扔进了油锅，又炸了一天一夜。 "}
-     */
 
+    @SerializedName("showapi_res_code")
     private int showapi_res_code;
+    @SerializedName("showapi_res_error")
     private String showapi_res_error;
+    @SerializedName("showapi_res_body")
     private ShowapiResBodyBean showapi_res_body;
 
     public int getShowapi_res_code() {
@@ -43,16 +43,14 @@ public class GuigushiDetailModel implements Serializable{
     }
 
     public static class ShowapiResBodyBean implements Serializable{
-        /**
-         * allPages : 1
-         * currentPage : 1
-         * ret_code : 0
-         * text :  啊！尖叫声中，水鬼再次被扔进了油锅，又炸了一天一夜。
-         */
 
+        @SerializedName("allPages")
         private int allPages;
+        @SerializedName("currentPage")
         private String currentPage;
+        @SerializedName("ret_code")
         private int ret_code;
+        @SerializedName("text")
         private String text;
 
         public int getAllPages() {

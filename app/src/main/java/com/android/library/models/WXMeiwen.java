@@ -1,5 +1,7 @@
 package com.android.library.models;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -9,14 +11,12 @@ import java.util.List;
  */
 
 public class WXMeiwen implements Serializable{
-    /**
-     * showapi_res_code : 0
-     * showapi_res_error :
-     * showapi_res_body : {"pagebean":{"allNum":5961,"allPages":299,"contentlist":[{"contentImg":"http://mmbiz.qpic.cn/mmbiz/e5DwVY6II2ZdcrTjryOw0ibOOTEh7nXI88VxM9m9pzia8pEVEzicUfibL7aGUcdQ2AXb8ahO90icqAiaqiczCiahE4Gzbg/0?wx_fmt=jpeg","date":"08月06日","id":"55c3b1096e36e0e8c3953012","title":"纽约梦丨欲求翻身，任重道远","typeId":"19","typeName":"体育迷","url":"http://mp.weixin.qq.com/s?__biz=MzA3MTgyNjcxMA==&mid=211970632&idx=1&sn=cbc03c2911bbf981f455dd161526029c&3rd=MzA3MDU4NTYzMw==&scene=6#rd","userLogo":"http://app1.showapi.com/weixin_info/287c5d08-0a52-4001-8e0c-8ed1222fa44d.jpg","userLogo_code":"http://app1.showapi.com/weixin_info/0327beff-34d8-49d4-9dcc-cdbba069c730.jpg","userName":"篮球先锋报"}],"currentPage":1,"maxResult":20},"ret_code":0}
-     */
 
+    @SerializedName("showapi_res_code")
     private int showapi_res_code;
+    @SerializedName("showapi_res_error")
     private String showapi_res_error;
+    @SerializedName("showapi_res_body")
     private ShowapiResBodyBean showapi_res_body;
 
     public int getShowapi_res_code() {
@@ -44,12 +44,10 @@ public class WXMeiwen implements Serializable{
     }
 
     public static class ShowapiResBodyBean implements Serializable{
-        /**
-         * pagebean : {"allNum":5961,"allPages":299,"contentlist":[{"contentImg":"http://mmbiz.qpic.cn/mmbiz/e5DwVY6II2ZdcrTjryOw0ibOOTEh7nXI88VxM9m9pzia8pEVEzicUfibL7aGUcdQ2AXb8ahO90icqAiaqiczCiahE4Gzbg/0?wx_fmt=jpeg","date":"08月06日","id":"55c3b1096e36e0e8c3953012","title":"纽约梦丨欲求翻身，任重道远","typeId":"19","typeName":"体育迷","url":"http://mp.weixin.qq.com/s?__biz=MzA3MTgyNjcxMA==&mid=211970632&idx=1&sn=cbc03c2911bbf981f455dd161526029c&3rd=MzA3MDU4NTYzMw==&scene=6#rd","userLogo":"http://app1.showapi.com/weixin_info/287c5d08-0a52-4001-8e0c-8ed1222fa44d.jpg","userLogo_code":"http://app1.showapi.com/weixin_info/0327beff-34d8-49d4-9dcc-cdbba069c730.jpg","userName":"篮球先锋报"}],"currentPage":1,"maxResult":20}
-         * ret_code : 0
-         */
 
+        @SerializedName("pagebean")
         private PagebeanBean pagebean;
+        @SerializedName("ret_code")
         private int ret_code;
 
         public PagebeanBean getPagebean() {
@@ -69,18 +67,15 @@ public class WXMeiwen implements Serializable{
         }
 
         public static class PagebeanBean  implements Serializable{
-            /**
-             * allNum : 5961
-             * allPages : 299
-             * contentlist : [{"contentImg":"http://mmbiz.qpic.cn/mmbiz/e5DwVY6II2ZdcrTjryOw0ibOOTEh7nXI88VxM9m9pzia8pEVEzicUfibL7aGUcdQ2AXb8ahO90icqAiaqiczCiahE4Gzbg/0?wx_fmt=jpeg","date":"08月06日","id":"55c3b1096e36e0e8c3953012","title":"纽约梦丨欲求翻身，任重道远","typeId":"19","typeName":"体育迷","url":"http://mp.weixin.qq.com/s?__biz=MzA3MTgyNjcxMA==&mid=211970632&idx=1&sn=cbc03c2911bbf981f455dd161526029c&3rd=MzA3MDU4NTYzMw==&scene=6#rd","userLogo":"http://app1.showapi.com/weixin_info/287c5d08-0a52-4001-8e0c-8ed1222fa44d.jpg","userLogo_code":"http://app1.showapi.com/weixin_info/0327beff-34d8-49d4-9dcc-cdbba069c730.jpg","userName":"篮球先锋报"}]
-             * currentPage : 1
-             * maxResult : 20
-             */
-
+            @SerializedName("allNum")
             private int allNum;
+            @SerializedName("allPages")
             private int allPages;
+            @SerializedName("currentPage")
             private int currentPage;
+            @SerializedName("maxResult")
             private int maxResult;
+            @SerializedName("contentlist")
             private List<ContentlistBean> contentlist;
 
             public int getAllNum() {
@@ -124,28 +119,25 @@ public class WXMeiwen implements Serializable{
             }
 
             public static class ContentlistBean  implements Serializable{
-                /**
-                 * contentImg : http://mmbiz.qpic.cn/mmbiz/e5DwVY6II2ZdcrTjryOw0ibOOTEh7nXI88VxM9m9pzia8pEVEzicUfibL7aGUcdQ2AXb8ahO90icqAiaqiczCiahE4Gzbg/0?wx_fmt=jpeg
-                 * date : 08月06日
-                 * id : 55c3b1096e36e0e8c3953012
-                 * title : 纽约梦丨欲求翻身，任重道远
-                 * typeId : 19
-                 * typeName : 体育迷
-                 * url : http://mp.weixin.qq.com/s?__biz=MzA3MTgyNjcxMA==&mid=211970632&idx=1&sn=cbc03c2911bbf981f455dd161526029c&3rd=MzA3MDU4NTYzMw==&scene=6#rd
-                 * userLogo : http://app1.showapi.com/weixin_info/287c5d08-0a52-4001-8e0c-8ed1222fa44d.jpg
-                 * userLogo_code : http://app1.showapi.com/weixin_info/0327beff-34d8-49d4-9dcc-cdbba069c730.jpg
-                 * userName : 篮球先锋报
-                 */
-
+                @SerializedName("contentImg")
                 private String contentImg;
+                @SerializedName("date")
                 private String date;
+                @SerializedName("id")
                 private String id;
+                @SerializedName("title")
                 private String title;
+                @SerializedName("typeId")
                 private String typeId;
+                @SerializedName("typeName")
                 private String typeName;
+                @SerializedName("url")
                 private String url;
+                @SerializedName("userLogo")
                 private String userLogo;
+                @SerializedName("userLogo_code")
                 private String userLogo_code;
+                @SerializedName("userName")
                 private String userName;
 
                 public String getContentImg() {

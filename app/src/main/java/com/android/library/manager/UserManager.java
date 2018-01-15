@@ -1,7 +1,8 @@
-package com.android.library.utils;
+package com.android.library.manager;
 
 import com.android.library.Library;
 import com.android.library.models.UserModel;
+import com.android.library.utils.SharedPreferencesUtils;
 
 /**
  * author: Rea.X

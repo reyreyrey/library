@@ -1,5 +1,8 @@
 package com.android.library.models;
 
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -7,15 +10,13 @@ import java.util.List;
  * date: 2017/12/5.
  */
 
-public class ManhuaDetail {
-    /**
-     * showapi_res_code : 0
-     * showapi_res_error :
-     * showapi_res_body : {"ret_code":0,"item":{"time":"3周前 (11-13)","title":"故事漫画《告白》爱就要勇敢地说出来","imgList":["http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e492266.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e4d9097.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e5305a7.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e5797cb.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e5bfd93.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e616d8e.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e682c0c.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e6c80f2.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e7168db.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e7935a1.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e7e0c93.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e848643.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e88d712.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e8ceeb5.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e91fbcb.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e967f12.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e9c084f.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6ea0ca62.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6ea564db.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6ea8f81a.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6eacfc25.jpg_s.0x0.auto.jpg"]}}
-     */
+public class ManhuaDetail implements Serializable{
 
+    @SerializedName("showapi_res_code")
     private int showapi_res_code;
+    @SerializedName("showapi_res_error")
     private String showapi_res_error;
+    @SerializedName("showapi_res_body")
     private ShowapiResBodyBean showapi_res_body;
 
     public int getShowapi_res_code() {
@@ -42,13 +43,11 @@ public class ManhuaDetail {
         this.showapi_res_body = showapi_res_body;
     }
 
-    public static class ShowapiResBodyBean {
-        /**
-         * ret_code : 0
-         * item : {"time":"3周前 (11-13)","title":"故事漫画《告白》爱就要勇敢地说出来","imgList":["http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e492266.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e4d9097.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e5305a7.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e5797cb.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e5bfd93.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e616d8e.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e682c0c.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e6c80f2.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e7168db.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e7935a1.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e7e0c93.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e848643.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e88d712.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e8ceeb5.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e91fbcb.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e967f12.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e9c084f.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6ea0ca62.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6ea564db.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6ea8f81a.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6eacfc25.jpg_s.0x0.auto.jpg"]}
-         */
+    public static class ShowapiResBodyBean implements Serializable{
 
+        @SerializedName("ret_code")
         private int ret_code;
+        @SerializedName("item")
         private ItemBean item;
 
         public int getRet_code() {
@@ -67,15 +66,13 @@ public class ManhuaDetail {
             this.item = item;
         }
 
-        public static class ItemBean {
-            /**
-             * time : 3周前 (11-13)
-             * title : 故事漫画《告白》爱就要勇敢地说出来
-             * imgList : ["http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e492266.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e4d9097.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e5305a7.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e5797cb.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e5bfd93.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e616d8e.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e682c0c.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e6c80f2.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e7168db.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e7935a1.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e7e0c93.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e848643.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e88d712.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e8ceeb5.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e91fbcb.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e967f12.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6e9c084f.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6ea0ca62.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6ea564db.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6ea8f81a.jpg_s.0x0.auto.jpg","http://s.cimg.163.com/i/bd3img.heibaimanhua.com/wp-content/uploads/2017/11/13/20171113_5a08f6eacfc25.jpg_s.0x0.auto.jpg"]
-             */
+        public static class ItemBean implements Serializable{
 
+            @SerializedName("time")
             private String time;
+            @SerializedName("title")
             private String title;
+            @SerializedName("imgList")
             private List<String> imgList;
 
             public String getTime() {

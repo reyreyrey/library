@@ -9,20 +9,15 @@ import android.widget.ImageView;
 
 import com.android.library.models.BaseModel;
 import com.android.library.models.ControlModel;
-import com.android.library.utils.Cons;
 import com.android.library.utils.GuideTools;
-import com.android.library.utils.OnInterfaceCheckCallback;
 import com.android.library.utils.SplashTools;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.gyf.barlibrary.BarHide;
 import com.gyf.barlibrary.ImmersionBar;
-import com.hyphenate.chat.EMClient;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
-
-import java.util.List;
 
 import static com.android.library.utils.ChatUtils.isLoggedIn;
 import static com.android.library.utils.ChatUtils.loadAll;

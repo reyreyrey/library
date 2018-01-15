@@ -1,20 +1,21 @@
 package com.android.library.models;
 
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by xinru on 2017/12/3.
  */
 
-public class CaiPiaoModel {
-    /**
-     * showapi_res_code : 0
-     * showapi_res_error :
-     * showapi_res_body : {"result":[{"code":"ssq","expect":"2015085","name":"双色球","openCode":"02,08,25,27,28,29+05","time":"2015-07-23 21:21:40","timestamp":1437657700000}],"ret_code":0}
-     */
+public class CaiPiaoModel implements Serializable{
 
+    @SerializedName("showapi_res_code")
     private int showapi_res_code;
+    @SerializedName("showapi_res_error")
     private String showapi_res_error;
+    @SerializedName("showapi_res_body")
     private ShowapiResBodyBean showapi_res_body;
 
     public int getShowapi_res_code() {
@@ -41,13 +42,10 @@ public class CaiPiaoModel {
         this.showapi_res_body = showapi_res_body;
     }
 
-    public static class ShowapiResBodyBean {
-        /**
-         * result : [{"code":"ssq","expect":"2015085","name":"双色球","openCode":"02,08,25,27,28,29+05","time":"2015-07-23 21:21:40","timestamp":1437657700000}]
-         * ret_code : 0
-         */
-
+    public static class ShowapiResBodyBean implements Serializable{
+        @SerializedName("ret_code")
         private int ret_code;
+        @SerializedName("result")
         private List<ResultBean> result;
 
         public int getRet_code() {
@@ -67,20 +65,18 @@ public class CaiPiaoModel {
         }
 
         public static class ResultBean {
-            /**
-             * code : ssq
-             * expect : 2015085
-             * name : 双色球
-             * openCode : 02,08,25,27,28,29+05
-             * time : 2015-07-23 21:21:40
-             * timestamp : 1437657700000
-             */
 
+            @SerializedName("code")
             private String code;
+            @SerializedName("expect")
             private String expect;
+            @SerializedName("name")
             private String name;
+            @SerializedName("openCode")
             private String openCode;
+            @SerializedName("time")
             private String time;
+            @SerializedName("timestamp")
             private long timestamp;
 
             public String getCode() {

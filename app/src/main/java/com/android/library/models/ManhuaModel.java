@@ -1,5 +1,7 @@
 package com.android.library.models;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -10,14 +12,12 @@ import java.util.List;
 
 public class ManhuaModel implements Serializable {
 
-    /**
-     * showapi_res_code : 0
-     * showapi_res_error :
-     * showapi_res_body : {"pagebean":{"contentlist":[{"id":"/weimanhua/kbmh/94615.html","link":"http://heibaimanhua.com/weimanhua/kbmh/94615.html","thumbnailList":["http://img03.store.sogou.com/net/a/04/link?appid=100520120&w=249&url=http://img.heibaimanhua.com/wp-content/uploads/2016/04/27/20160427_57201f7baf89a.jpg_x"],"time":"2小时前","title":"人性实验《什么是真爱？》-黑白漫话"}],"currentPage":1,"hasMorePage":true,"maxResult":"50"},"ret_code":0}
-     */
 
+    @SerializedName("showapi_res_code")
     private int showapi_res_code;
+    @SerializedName("showapi_res_error")
     private String showapi_res_error;
+    @SerializedName("showapi_res_body")
     private ShowapiResBodyBean showapi_res_body;
 
     public int getShowapi_res_code() {
@@ -45,12 +45,10 @@ public class ManhuaModel implements Serializable {
     }
 
     public static class ShowapiResBodyBean implements Serializable {
-        /**
-         * pagebean : {"contentlist":[{"id":"/weimanhua/kbmh/94615.html","link":"http://heibaimanhua.com/weimanhua/kbmh/94615.html","thumbnailList":["http://img03.store.sogou.com/net/a/04/link?appid=100520120&w=249&url=http://img.heibaimanhua.com/wp-content/uploads/2016/04/27/20160427_57201f7baf89a.jpg_x"],"time":"2小时前","title":"人性实验《什么是真爱？》-黑白漫话"}],"currentPage":1,"hasMorePage":true,"maxResult":"50"}
-         * ret_code : 0
-         */
 
+        @SerializedName("pagebean")
         private PagebeanBean pagebean;
+        @SerializedName("ret_code")
         private int ret_code;
 
         public PagebeanBean getPagebean() {
@@ -70,16 +68,13 @@ public class ManhuaModel implements Serializable {
         }
 
         public static class PagebeanBean implements Serializable {
-            /**
-             * contentlist : [{"id":"/weimanhua/kbmh/94615.html","link":"http://heibaimanhua.com/weimanhua/kbmh/94615.html","thumbnailList":["http://img03.store.sogou.com/net/a/04/link?appid=100520120&w=249&url=http://img.heibaimanhua.com/wp-content/uploads/2016/04/27/20160427_57201f7baf89a.jpg_x"],"time":"2小时前","title":"人性实验《什么是真爱？》-黑白漫话"}]
-             * currentPage : 1
-             * hasMorePage : true
-             * maxResult : 50
-             */
-
+            @SerializedName("currentPage")
             private int currentPage;
+            @SerializedName("hasMorePage")
             private boolean hasMorePage;
+            @SerializedName("maxResult")
             private String maxResult;
+            @SerializedName("contentlist")
             private List<ContentlistBean> contentlist;
 
             public int getCurrentPage() {
@@ -115,18 +110,16 @@ public class ManhuaModel implements Serializable {
             }
 
             public static class ContentlistBean implements Serializable {
-                /**
-                 * id : /weimanhua/kbmh/94615.html
-                 * link : http://heibaimanhua.com/weimanhua/kbmh/94615.html
-                 * thumbnailList : ["http://img03.store.sogou.com/net/a/04/link?appid=100520120&w=249&url=http://img.heibaimanhua.com/wp-content/uploads/2016/04/27/20160427_57201f7baf89a.jpg_x"]
-                 * time : 2小时前
-                 * title : 人性实验《什么是真爱？》-黑白漫话
-                 */
 
+                @SerializedName("id")
                 private String id;
+                @SerializedName("link")
                 private String link;
+                @SerializedName("time")
                 private String time;
+                @SerializedName("title")
                 private String title;
+                @SerializedName("thumbnailList")
                 private List<String> thumbnailList;
 
                 public String getId() {

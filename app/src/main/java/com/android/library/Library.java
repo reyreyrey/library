@@ -4,7 +4,7 @@ import android.app.Application;
 
 import com.android.library.models.BaseModel;
 import com.android.library.models.UserModel;
-import com.android.library.utils.UserManager;
+import com.android.library.manager.UserManager;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.hyphenate.chat.EMOptions;
