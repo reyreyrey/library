@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 import com.android.library.R;
-import com.android.library.databinding.DialogProgressBinding;
 import com.github.ybq.android.spinkit.SpinKitView;
 
 import java.util.ArrayList;
@@ -16,7 +15,6 @@ import java.util.List;
 
 
 public class LoadingProgressDialog extends ProgressDialog {
-    protected DialogProgressBinding databinding;
     protected List<SpinKitView> views;
     protected int random;
     private SpinKitView currentView;
@@ -30,25 +28,24 @@ public class LoadingProgressDialog extends ProgressDialog {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        databinding = DataBindingUtil.inflate(LayoutInflater.from(getContext()), R.layout.dialog_progress, null, false);
         setCanceledOnTouchOutside(false);
-        setContentView(databinding.getRoot());
+        setContentView(R.layout.dialog_progress);
         addViews();
     }
 
     private void addViews() {
-        views.add(databinding.spinKit1);
-        views.add(databinding.spinKit2);
-        views.add(databinding.spinKit3);
-        views.add(databinding.spinKit4);
-        views.add(databinding.spinKit5);
-        views.add(databinding.spinKit6);
-        views.add(databinding.spinKit7);
-        views.add(databinding.spinKit8);
-        views.add(databinding.spinKit9);
-        views.add(databinding.spinKit10);
-        views.add(databinding.spinKit11);
-        views.add(databinding.spinKit12);
+        views.add((SpinKitView) findViewById(R.id.spin_kit1));
+        views.add((SpinKitView) findViewById(R.id.spin_kit2));
+        views.add((SpinKitView) findViewById(R.id.spin_kit3));
+        views.add((SpinKitView) findViewById(R.id.spin_kit4));
+        views.add((SpinKitView) findViewById(R.id.spin_kit5));
+        views.add((SpinKitView) findViewById(R.id.spin_kit6));
+        views.add((SpinKitView) findViewById(R.id.spin_kit7));
+        views.add((SpinKitView) findViewById(R.id.spin_kit8));
+        views.add((SpinKitView) findViewById(R.id.spin_kit9));
+        views.add((SpinKitView) findViewById(R.id.spin_kit10));
+        views.add((SpinKitView) findViewById(R.id.spin_kit11));
+        views.add((SpinKitView) findViewById(R.id.spin_kit12));
 
         random = (int) (Math.random() * views.size());
         currentView = views.get(random);
