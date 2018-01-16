@@ -92,45 +92,45 @@ android {
 
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile dep.appcompat
-    compile dep.design
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api dep.appcompat
+    api dep.design
     //沉浸式状态栏
-    compile dep.barlibrary
+    api dep.barlibrary
     //极光
-    compile dep.jpush
-    compile dep.jcore
+    api dep.jpush
+    api dep.jcore
     //水平数字进度条
-    compile dep.numberprogressbar
+    api dep.numberprogressbar
     //loading动画
-    compile dep.AndroidSpinKit
-    compile dep.gson
-    compile dep.rxjava2
-    compile dep.rxandroid2
+    api dep.AndroidSpinKit
+    api dep.gson
+    api dep.rxjava2
+    api dep.rxandroid2
     //轮播图
-    compile dep.bgabanner
-    compile files('libs/tbs_sdk_thirdapp_v3.3.0.1045_43300_sharewithdownload_withoutGame_obfs_20170605_170212.jar')
-    compile dep.okgo
+    api dep.bgabanner
+    api files('libs/tbs_sdk_thirdapp_v3.3.0.1045_43300_sharewithdownload_withoutGame_obfs_20170605_170212.jar')
+    api dep.okgo
     //下拉刷新
-    compile dep.SmartRefreshLayout
-    compile dep.SmartRefreshHeader
+    api dep.SmartRefreshLayout
+    api dep.SmartRefreshHeader
     //listview的adapter
 
-    compile dep.ListViewBaseAdapter
-    compile dep.glide
-    compile dep.hyphenate
-    compile dep.circleDialog
-    compile dep.acp
+    api dep.ListViewBaseAdapter
+    api dep.glide
+    api dep.hyphenate
+    api dep.circleDialog
+    api dep.acp
 
-    compile dep.PhotoView
+    api dep.PhotoView
     //圆形imageview
-    compile dep.circleimageview
+    api dep.circleimageview
     //瀑布流
-    compile dep.pullloadmorerecyclerview
-    compile dep.imagepicker
-    compile dep.banner
-    compile dep.eventbus
-    compile dep.viewcore
+    api dep.pullloadmorerecyclerview
+    api dep.imagepicker
+    api dep.banner
+    api dep.eventbus
+    api dep.viewcore
 }
 
 

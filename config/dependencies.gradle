@@ -11,10 +11,10 @@ allprojects {
 }
 
 ext {
-    compile = 25
-    buildTools = "25.0.0"
+    compile = 27
+    buildTools = "27.0.3"
     min = "16"
-    target = "25"
+    target = "27"
     versionCode = 1
     versionName = "0.0.1"
 
