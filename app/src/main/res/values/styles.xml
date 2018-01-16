@@ -256,11 +256,7 @@
     <style name="dialogdialog" parent="style_dialog">
         <item name="android:background">@android:color/transparent</item>
     </style>
-    <style name="dialoganimationstyle" parent="android:Animation">
-        <item name="@android:windowEnterAnimation">@anim/dialog_enter</item>
 
-        <item name="@android:windowExitAnimation">@anim/dialog_exit</item>
-    </style>
 
 
 
@@ -271,12 +267,8 @@
         <item name="android:windowIsFloating">true</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:scrollHorizontally">true</item>
-        <!-- Dialog进入及退出动画 -->
-        <item name="android:windowAnimationStyle">@style/BottomToTopAnim</item>
+
     </style>
 
-    <style name="BottomToTopAnim" parent="android:Animation">
-        <item name="@android:windowEnterAnimation">@anim/bottom_in</item>
-        <item name="@android:windowExitAnimation">@anim/bottom_out</item>
-    </style>
+
 </resources>
