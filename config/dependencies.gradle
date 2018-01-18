@@ -106,7 +106,9 @@ ext {
     banner = "1.4.10"
     hyphenate = "3.3.7"
     pullloadmorerecyclerview = "1.1.2"
+    goodView = "1.0.0"
     dep = [
+            goodView                : "com.wx.goodview:goodview:$goodView",
             banner                  : "com.youth.banner:banner:$banner",
             circleDialog            : "com.mylhyl:circleDialog:$circleDialog",
             eventbus                : "org.simple:androideventbus:$eventbus",

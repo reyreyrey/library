@@ -23,7 +23,9 @@ public class UserManager {
     public static boolean isLogin() {
         return getCurrentUser() != null;
     }
-
+    public static void saveUser(UserModel model) {
+        SharedPreferencesUtils.saveObject(Library.get(), KEY_CURRENT_USER, model);
+    }
     public static void saveOtherUser(UserModel model) {
         SharedPreferencesUtils.saveObject(Library.get(), model.getUsername(), model);
     }

@@ -131,6 +131,8 @@ dependencies {
     compile dep.banner
     compile dep.eventbus
     compile dep.viewcore
+    //点赞效果
+    compile dep.goodView
 }
 
 

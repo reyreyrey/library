@@ -35,6 +35,8 @@ public abstract class RefreshFragment<D> extends UIBaseFragment implements OnRef
         smartRefreshLayout.setOnRefreshLoadmoreListener(this);
         adapter = getAdapter();
         listView.setAdapter(adapter);
+        if (needQueryInInit())
+            smartRefreshLayout.autoRefresh();
     }
 
     protected void showEmptyView() {
@@ -85,8 +87,7 @@ public abstract class RefreshFragment<D> extends UIBaseFragment implements OnRef
 
     @Override
     protected void lazyLoad() {
-        if (needQueryInInit())
-            smartRefreshLayout.autoRefresh();
+
     }
 
     @Override

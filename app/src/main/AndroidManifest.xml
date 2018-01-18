@@ -85,6 +85,32 @@
             android:screenOrientation="portrait" />
 
         <activity
+            android:name="com.android.library.ui.PostListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.android.library.ui.RegisterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.android.library.ui.CommentListActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.android.library.ui.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.android.library.ui.PostDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name="com.android.library.ui.GuigushiDetailActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
