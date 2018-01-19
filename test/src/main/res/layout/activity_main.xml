@@ -24,4 +24,23 @@
         android:onClick="login"
         android:text="登录" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="sendPost"
+        android:text="发帖" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="mine"
+        android:text="我的" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="search"
+        android:text="搜索" />
+
+
 </LinearLayout>

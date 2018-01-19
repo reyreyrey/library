@@ -107,7 +107,9 @@ ext {
     hyphenate = "3.3.7"
     pullloadmorerecyclerview = "1.1.2"
     goodView = "1.0.0"
+    EasyBlur = "v1.0.0"
     dep = [
+            EasyBlur                : "com.github.pinguo-zhouwei:EasyBlur:$EasyBlur",
             goodView                : "com.wx.goodview:goodview:$goodView",
             banner                  : "com.youth.banner:banner:$banner",
             circleDialog            : "com.mylhyl:circleDialog:$circleDialog",

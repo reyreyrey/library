@@ -34,6 +34,10 @@ android {
         buildConfigField "String", "show_splash_time", "\"${show_splash_time}\""
 
         resValue "color", "colorPrimary", themeColor
+
+        //使用renderscript 兼容包
+        renderscriptTargetApi 25
+        renderscriptSupportModeEnabled true
     }
 
     useLibrary 'org.apache.http.legacy'

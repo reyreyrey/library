@@ -9,6 +9,7 @@ import android.view.View;
 import com.android.library.R;
 import com.android.library.base.UIActivity;
 import com.android.library.databinding.ActivityLoginBinding;
+import com.android.library.manager.UserManager;
 import com.android.library.models.BaseModel;
 import com.android.library.models.UserModel;
 import com.android.library.utils.Cons;
@@ -95,6 +96,7 @@ public class LoginActivity extends UIActivity<ActivityLoginBinding> implements V
                         BaseModel<UserModel> baseModel = new Gson().fromJson(result, new TypeToken<BaseModel<UserModel>>() {
                         }.getType());
                         if (baseModel.getSuccess() == 1) {
+                            UserManager.saveUser(baseModel.getData());
                             loginChat(username, pwd);
                         } else {
                             dismissProgress();

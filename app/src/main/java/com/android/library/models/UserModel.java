@@ -28,6 +28,28 @@ public class UserModel implements Serializable{
     private int sex;
     @SerializedName("birthday")
     private String birthday;
+    @SerializedName("sign")
+    private String sign;
+    //查看他人信息时返回是否关注了这个人
+    @SerializedName("is_attention")
+    private boolean is_attention;
+
+
+    public boolean isIs_attention() {
+        return is_attention;
+    }
+
+    public void setIs_attention(boolean is_attention) {
+        this.is_attention = is_attention;
+    }
+
+    public String getSign() {
+        return sign;
+    }
+
+    public void setSign(String sign) {
+        this.sign = sign;
+    }
 
     public String getUsername() {
         return username;

@@ -18,7 +18,7 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshLoadmoreListener;
  */
 
 public abstract class RefreshFragment<D> extends UIBaseFragment implements OnRefreshLoadmoreListener,AdapterView.OnItemClickListener {
-    protected int currentPage = 0;
+    protected int currentPage = 1;
     protected QuickAdapter<D> adapter;
     protected boolean isRefresh;
     protected SmartRefreshLayout smartRefreshLayout;
@@ -70,7 +70,7 @@ public abstract class RefreshFragment<D> extends UIBaseFragment implements OnRef
     public void onRefresh(RefreshLayout refreshlayout) {
         showContent();
         isRefresh = true;
-        currentPage = 0;
+        currentPage = 1;
         query();
     }
 

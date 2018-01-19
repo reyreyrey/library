@@ -6,7 +6,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.android.library.R;
-import com.android.library.base.UIActivity;
 import com.joanzapata.android.QuickAdapter;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -17,7 +16,7 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshLoadmoreListener;
  * date: 2017/12/14.
  */
 
-public abstract class RefreshActivity<D> extends UIActivity implements OnRefreshLoadmoreListener,AdapterView.OnItemClickListener {
+public abstract class RefreshActivity<D> extends UIActivity implements OnRefreshLoadmoreListener, AdapterView.OnItemClickListener {
     protected int currentPage = 1;
     protected QuickAdapter<D> adapter;
     protected boolean isRefresh;
@@ -65,6 +64,11 @@ public abstract class RefreshActivity<D> extends UIActivity implements OnRefresh
 
     @Override
     public void onLoadmore(RefreshLayout refreshlayout) {
+        if (!enableLoadmore()) {
+            smartRefreshLayout.finishRefresh();
+            smartRefreshLayout.finishLoadmore();
+            return;
+        }
         isRefresh = false;
         currentPage++;
         query();
@@ -83,6 +87,10 @@ public abstract class RefreshActivity<D> extends UIActivity implements OnRefresh
     }
 
     protected abstract void query();
+
+    protected boolean enableLoadmore() {
+        return true;
+    }
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {

@@ -133,6 +133,8 @@ dependencies {
     compile dep.viewcore
     //点赞效果
     compile dep.goodView
+    //高斯模糊
+    compile dep.EasyBlur
 }
 
 
