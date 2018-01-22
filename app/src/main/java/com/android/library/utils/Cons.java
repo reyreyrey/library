@@ -27,6 +27,7 @@ public class Cons {
 
     public static final String CONTROL_URL = BASE_URL + "control.php?appid=";
     public static final String USERINFO_URL = BASE_URL + "userinfo.php?other_user_name=";
+    public static final String USERINFO_BY_ID_URL = BASE_URL + "userinfoById.php?other_user_id=";
     public static final String POST_LIST_URL = BASE_URL + "postList.php";
     public static final String POST_DETAIL_URL = BASE_URL + "postDetail.php?id=";
     public static final String REG_URL = BASE_URL + "reg.php";
@@ -43,6 +44,7 @@ public class Cons {
     public static final String MY_FANS_URL = BASE_URL + "MyFans.php?userid=";
     public static final String MY_SAVE_URL = BASE_URL + "mySav.php?user_id=";
     public static final String MY_POST_URL = BASE_URL + "myPost.php?user_id=";
+    public static final String USER_FAV_POST_URL = BASE_URL + "MyFavPost.php?user_id=";
     public static final String EDIT_USER_INFO = BASE_URL + "editUser.php";
     public static final String SEARCH_URL= BASE_URL + "searchUser.php?key=";
 }

@@ -19,6 +19,7 @@
 
 
             <LinearLayout
+                android:id="@+id/iv_background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -80,7 +81,16 @@
                 <android.support.design.widget.TabLayout
                     android:id="@+id/tablayout"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    app:tabTextColor="#333333"
+                    app:tabSelectedTextColor="@color/colorPrimary"
+                    app:tabIndicatorColor="@color/colorPrimary"
+                    app:tabIndicatorHeight="2dp"
+                    app:tabGravity="fill"
+                    app:tabMode="fixed"
+                    android:layout_height="wrap_content">
+
+
+                </android.support.design.widget.TabLayout>
 
                 <android.support.v4.view.ViewPager
                     android:id="@+id/viewpager"
@@ -105,7 +115,7 @@
                     android:layout_weight="1" />
 
                 <TextView
-                    android:id="@+id/tv_my_attation"
+                    android:id="@+id/tv_attation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -132,7 +142,7 @@
                     android:layout_weight="1" />
 
                 <TextView
-                    android:id="@+id/tv_my_fan"
+                    android:id="@+id/tv_chat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/ic_other_user_chat"

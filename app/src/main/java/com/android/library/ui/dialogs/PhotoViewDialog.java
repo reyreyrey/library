@@ -4,6 +4,7 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment2;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,12 @@ import com.bumptech.glide.Glide;
  */
 
 public class PhotoViewDialog extends DialogFragment2 {
+
+    public static void seeBigImage(AppCompatActivity appCompatActivity, String src){
+        PhotoViewDialog dialog = new PhotoViewDialog();
+        dialog.setImage(src);
+        dialog.show(appCompatActivity.getSupportFragmentManager(), "1");
+    }
 
     private DialogPhotoviewBinding binding;
     private String src;

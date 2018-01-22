@@ -34,6 +34,26 @@ public class UserModel implements Serializable{
     @SerializedName("is_attention")
     private boolean is_attention;
 
+    @SerializedName("attCount")
+    private String attCount;
+    @SerializedName("fanCount")
+    private String fanCount;
+
+    public String getAttCount() {
+        return attCount;
+    }
+
+    public void setAttCount(String attCount) {
+        this.attCount = attCount;
+    }
+
+    public String getFanCount() {
+        return fanCount;
+    }
+
+    public void setFanCount(String fanCount) {
+        this.fanCount = fanCount;
+    }
 
     public boolean isIs_attention() {
         return is_attention;

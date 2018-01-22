@@ -162,6 +162,13 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
+
+        <activity
+            android:name="com.android.library.ui.FanActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+
         <activity
             android:name="com.android.trend.ui.TrendActivity"
             android:launchMode="singleTask"

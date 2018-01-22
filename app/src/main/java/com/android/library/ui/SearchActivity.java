@@ -1,9 +1,13 @@
 package com.android.library.ui;
 
 import android.text.TextUtils;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.android.library.R;
 import com.android.library.adapter.UserAdapter;
@@ -26,7 +30,7 @@ import java.util.List;
 import static com.android.library.utils.Cons.SEARCH_URL;
 
 
-public class SearchActivity extends RefreshActivity<UserModel> implements View.OnClickListener, Runnable {
+public class SearchActivity extends RefreshActivity<UserModel> implements View.OnClickListener, Runnable, TextView.OnEditorActionListener {
 
 
     private ImageView ivSearch;
@@ -51,6 +55,7 @@ public class SearchActivity extends RefreshActivity<UserModel> implements View.O
         handler.postDelayed(this, 300);
         ivSearch = (ImageView) findViewById(R.id.iv_search);
         edtSearch = (EditText) findViewById(R.id.edt_search);
+        edtSearch.setOnEditorActionListener(this);
         ivSearch.setOnClickListener(this);
         super.init();
     }
@@ -131,5 +136,22 @@ public class SearchActivity extends RefreshActivity<UserModel> implements View.O
                 refreshView();
             }
         });
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        super.onItemClick(adapterView, view, i, l);
+        OtherUserActivity.seeOtherUser(context, adapter.getItem(i).getUserid(), adapter.getItem(i).getUsername());
+    }
+
+    @Override
+    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+        if (actionId == EditorInfo.IME_ACTION_SEND
+                || actionId == EditorInfo.IME_ACTION_DONE
+                || (event != null && KeyEvent.KEYCODE_ENTER == event.getKeyCode() && KeyEvent.ACTION_DOWN == event.getAction())) {
+            search();
+            return true;
+        }
+        return false;
     }
 }

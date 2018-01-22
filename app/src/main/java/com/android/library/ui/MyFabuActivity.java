@@ -67,4 +67,9 @@ public class MyFabuActivity extends RefreshActivity<Post> {
         super.onItemClick(adapterView, view, i, l);
         PostDetailActivity.seePostDetail(context, adapter.getItem(i));
     }
+
+    @Override
+    protected boolean enableLoadmore() {
+        return false;
+    }
 }

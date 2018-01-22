@@ -44,7 +44,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void search(View v){
-        startActivity(new Intent(this, OtherUserActivity.class));
+        startActivity(new Intent(this, SearchActivity.class));
     }
-
+    public void other(View v){
+        OtherUserActivity.seeOtherUser(this, "d9cf9e8c-99d8-de5c-2ab2-10f77cdc8849", "kk");
+    }
 }
