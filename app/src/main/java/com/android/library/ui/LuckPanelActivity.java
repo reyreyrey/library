@@ -1,5 +1,6 @@
 package com.android.library.ui;
 
+import android.text.TextUtils;
 import android.view.View;
 
 import com.android.library.R;
@@ -10,7 +11,7 @@ import com.mylhyl.circledialog.CircleDialog;
 
 import java.util.Random;
 
-public class LuckPanelActivity extends UIActivity<ActivityLuckPanelBinding> implements LuckyMonkeyPanelView.OnGameStopListener,Runnable {
+public class LuckPanelActivity extends UIActivity<ActivityLuckPanelBinding> implements LuckyMonkeyPanelView.OnGameStopListener, Runnable {
 
     private CircleDialog.Builder builder;
 
@@ -21,7 +22,11 @@ public class LuckPanelActivity extends UIActivity<ActivityLuckPanelBinding> impl
 
     @Override
     protected void init() {
-        tvTitle.setText("手气");
+        String title = getIntent().getStringExtra("title");
+        if (!TextUtils.isEmpty(title))
+            tvTitle.setText(title);
+        else
+            tvTitle.setText("手气");
         builder = new CircleDialog.Builder(context);
         databinding.btnAction.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,7 +38,6 @@ public class LuckPanelActivity extends UIActivity<ActivityLuckPanelBinding> impl
             }
         });
     }
-
 
 
     @Override

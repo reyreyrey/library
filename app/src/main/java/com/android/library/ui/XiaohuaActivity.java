@@ -1,9 +1,9 @@
 package com.android.library.ui;
 
 import android.content.Intent;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
-
 
 import com.android.library.adapter.XiaohuaAdapter;
 import com.android.library.base.RefreshActivity;
@@ -24,7 +24,11 @@ public class XiaohuaActivity extends RefreshActivity<XiaohuaModel.ShowapiResBody
 
     @Override
     protected void init() {
-        tvTitle.setText("每日一笑");
+        String title = getIntent().getStringExtra("title");
+        if (!TextUtils.isEmpty(title))
+            tvTitle.setText(title);
+        else
+            tvTitle.setText("每日一笑");
         mAdapter = new XiaohuaAdapter(context);
         super.init();
     }

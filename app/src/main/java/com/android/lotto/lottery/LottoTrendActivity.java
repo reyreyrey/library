@@ -4,7 +4,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
 
-
 import com.android.library.R;
 import com.android.library.base.UIActivity;
 import com.android.lotto.data.TrendData;
@@ -42,7 +41,11 @@ public class LottoTrendActivity extends UIActivity implements DDTrendChart.ISele
     @Override
     protected void init() {
         showProgress();
-        tvTitle.setText("走势图");
+        String title = getIntent().getStringExtra("title");
+        if (!TextUtils.isEmpty(title))
+            tvTitle.setText(title);
+        else
+            tvTitle.setText("走势图");
         initViews();
         loadData();
     }

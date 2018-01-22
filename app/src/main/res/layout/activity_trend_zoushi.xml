@@ -6,6 +6,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:weightSum="10">
+        <include layout="@layout/toolbar"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -89,7 +90,7 @@
                     android:layout_height="fill_parent"
                     android:scrollbars="none">
 
-                    <com.android.mj.view.TrendView
+                    <com.android.library.views.TrendView
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent" />
                 </com.android.trend.widget.TrendScrollViewWidget>

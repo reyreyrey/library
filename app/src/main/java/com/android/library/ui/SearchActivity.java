@@ -50,7 +50,11 @@ public class SearchActivity extends RefreshActivity<UserModel> implements View.O
 
     @Override
     protected void init() {
-        tvTitle.setText("搜索");
+        String title = getIntent().getStringExtra("title");
+        if (!TextUtils.isEmpty(title))
+            tvTitle.setText(title);
+        else
+            tvTitle.setText("搜索");
         userModel = UserManager.getCurrentUser();
         handler.postDelayed(this, 300);
         ivSearch = (ImageView) findViewById(R.id.iv_search);

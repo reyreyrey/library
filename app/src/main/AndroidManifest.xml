@@ -170,6 +170,18 @@
 
 
         <activity
+            android:name="com.android.library.ui.SystemNotifyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name="com.android.library.ui.SystemNotifyDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+
+        <activity
             android:name="com.android.trend.ui.TrendActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />

@@ -1,6 +1,8 @@
 package com.android.library.ui;
 
 
+import android.text.TextUtils;
+
 import com.android.library.R;
 import com.android.library.adapter.FuliAdapter;
 import com.android.library.base.UIActivity;
@@ -31,7 +33,11 @@ public class FuliActivity extends UIActivity<ActivityArtListBinding> implements 
 
     @Override
     protected void init() {
-        tvTitle.setText("福利");
+        String title = getIntent().getStringExtra("title");
+        if (!TextUtils.isEmpty(title))
+            tvTitle.setText(title);
+        else
+            tvTitle.setText("福利");
         databinding.pullLoadMoreRecyclerView.setStaggeredGridLayout(3);//参数为列数
         adapter = new FuliAdapter(this);
         databinding.pullLoadMoreRecyclerView.setAdapter(adapter);
@@ -81,7 +87,7 @@ public class FuliActivity extends UIActivity<ActivityArtListBinding> implements 
 
     @Override
     public void onLoadMore() {
-        currentPage ++;
+        currentPage++;
         query(false);
     }
 }

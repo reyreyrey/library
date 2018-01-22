@@ -1,5 +1,7 @@
 package com.android.library.ui;
 
+import android.text.TextUtils;
+
 import com.android.library.adapter.UserAdapter;
 import com.android.library.base.RefreshActivity;
 import com.android.library.manager.UserManager;
@@ -21,7 +23,11 @@ public class MyAttentionActivity extends RefreshActivity<UserModel> {
     @Override
     protected void init() {
         super.init();
-        tvTitle.setText("我的关注");
+        String title = getIntent().getStringExtra("title");
+        if (!TextUtils.isEmpty(title))
+            tvTitle.setText(title);
+        else
+            tvTitle.setText("我的关注");
     }
 
     @Override
@@ -36,9 +42,10 @@ public class MyAttentionActivity extends RefreshActivity<UserModel> {
                     @Override
                     public void onSuccess(Response<String> response) {
                         String result = response.body();
-                        BaseModel<List<UserModel>> baseModel = new Gson().fromJson(result, new TypeToken<BaseModel<List<UserModel>>>(){}.getType());
-                        if(baseModel.getSuccess() == 1){
-                            if(isRefresh){
+                        BaseModel<List<UserModel>> baseModel = new Gson().fromJson(result, new TypeToken<BaseModel<List<UserModel>>>() {
+                        }.getType());
+                        if (baseModel.getSuccess() == 1) {
+                            if (isRefresh) {
                                 adapter.clear();
                             }
                             adapter.addAll(baseModel.getData());

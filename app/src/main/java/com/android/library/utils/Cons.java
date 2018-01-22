@@ -9,6 +9,8 @@ package com.android.library.utils;
 public class Cons {
 
 
+
+
     /**
      * Prefrences
      */
@@ -47,4 +49,6 @@ public class Cons {
     public static final String USER_FAV_POST_URL = BASE_URL + "MyFavPost.php?user_id=";
     public static final String EDIT_USER_INFO = BASE_URL + "editUser.php";
     public static final String SEARCH_URL= BASE_URL + "searchUser.php?key=";
+    public static final String SYSTEM_NOTIFY_URL = BASE_URL + "systemNotify.php";
+    public static final String SYSTEM_NOTIFY_DETAIL_URL = BASE_URL + "systemNotifyDetail.php?notify_id=";
 }

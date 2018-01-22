@@ -1,5 +1,6 @@
 package com.android.library.ui;
 
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 
@@ -51,7 +52,11 @@ public class GuigushiActivity extends RefreshActivity<GuigushiModel.ShowapiResBo
 
     @Override
     protected void init() {
-        tvTitle.setText("鬼故事");
+        String title = getIntent().getStringExtra("title");
+        if (!TextUtils.isEmpty(title))
+            tvTitle.setText(title);
+        else
+            tvTitle.setText("鬼故事");
         adapter = new GuigushiAdapter(context);
         getType();
         super.init();

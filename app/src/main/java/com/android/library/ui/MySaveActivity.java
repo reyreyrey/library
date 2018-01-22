@@ -1,5 +1,6 @@
 package com.android.library.ui;
 
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 
@@ -27,7 +28,11 @@ public class MySaveActivity extends RefreshActivity<Post> {
     @Override
     protected void init() {
         super.init();
-        tvTitle.setText("我的收藏");
+        String title = getIntent().getStringExtra("title");
+        if (!TextUtils.isEmpty(title))
+            tvTitle.setText(title);
+        else
+            tvTitle.setText("我的收藏");
     }
 
 

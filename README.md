@@ -100,67 +100,87 @@
 <p>7.编译运行</p>
 
 ##其他
-<p>1.最近开奖页面</p>
-<pre>
-  <code>
-        startActivity(new Intent(context, TrendChartActivity.class));
-  </code>
- </pre>
-
-<p>2.走势图页面</p>
-<pre>
-   <code>
-        startActivity(new Intent(context, LottoTrendActivity.class));
-   </code>
-</pre>
-<p>3.画展瀑布流页面</p>
-<pre>
-   <code>
-        startActivity(new Intent(context, ArtActivity.class));
-   </code>
-</pre>
-<p>4.聊天页面</p>
-<pre>
-   <code>
-        ChatActivity.chat(ChatListActivity.this, username);
-   </code>
-</pre>
-<p>5.福利美女页面</p>
-<pre>
-  <code>
-        startActivity(new Intent(context, FuliActivity.class));
-  </code>
-</pre>
-<p>6.鬼故事页面</p>
-<pre>
-	<code>
-        startActivity(new Intent(context, GuigushiActivity.class));
-    </code>
-</pre>
-<p>7.幸运转盘页面</p>
-<pre>
-    <code>
-        startActivity(new Intent(context, LuckPanelActivity.class));
-    </code>
-</pre>
-<p>8.漫画页面</p>
-<pre>
-    <code>
-        startActivity(new Intent(context, ManhualistActivity.class));
-    </code>
-</pre>
-<p>8.微信文章页面</p>
-<pre>
-    <code>
-        startActivity(new Intent(context, WXMeiwenActivity.class));
-    </code>
-</pre>
-<p>9.笑话页面</p>
-<pre>
-    <code>
-        startActivity(new Intent(context, XiaohuaActivity.class));
-    </code>
-</pre>
+UIManager类中的方法
+<p>static void	art(android.content.Context context)
+艺术列表（使用默认标题）</p>
+<p>static void	art(android.content.Context context, java.lang.String title)
+艺术家列表</p>
+<p>static void	caipiaoHistory(android.content.Context context)
+彩票开奖记录</p>
+<p>static void	caipiaoHistory(android.content.Context context, java.lang.String title)
+彩票开奖记录</p>
+<p>static void	chat(android.content.Context context, java.lang.String userName)
+与某个用户聊天</p>
+<p>static void	chatList(android.content.Context context)
+会话列表 页面</p>
+<p>static void	fuli(android.content.Context context)
+福利页面（图片瀑布流）</p>
+<p>static void	fuli(android.content.Context context, java.lang.String title)
+福利页面（图片瀑布流）</p>
+<p>static void	guigushi(android.content.Context context)
+鬼故事页面</p>
+<p>static void	guigushi(android.content.Context context, java.lang.String title)
+鬼故事页面</p>
+<p>static void	login(android.content.Context context)
+登录</p>
+<p>static void	lotteryChar(android.content.Context context)
+走势图</p>
+<p>static void	lotteryChar(android.content.Context context, java.lang.String title)
+走势图</p>
+<p>static void	lotteryChar1(android.content.Context context)
+走势图2</p>
+<p>static void	lotteryChar1(android.content.Context context, java.lang.String title)
+走势图2</p>
+<p>static void	luck(android.content.Context context)
+鬼故事页面</p>
+<p>static void	luck(android.content.Context context, java.lang.String title)
+幸运转盘页面</p>
+<p>static void	manhua(android.content.Context context)
+漫画列表页面</p>
+<p>static void	manhua(android.content.Context context, java.lang.String title)
+漫画列表页面</p>
+<p>static void	mine(android.content.Context context)
+个人中心</p>
+<p>static void	mine(android.content.Context context, java.lang.String title)
+个人中心</p>
+<p>static void	myAttention(android.content.Context context)
+我关注的人（必须是登录状态）</p>
+<p>static void	myAttention(android.content.Context context, java.lang.String title)
+我关注的人（必须是登录状态）</p>
+<p>static void	myFabu(android.content.Context context)
+我发布的帖子（必须是登录状态）</p>
+<p>static void	myFabu(android.content.Context context, java.lang.String title)
+我发布的帖子（必须是登录状态）</p>
+<p>static void	mySave(android.content.Context context)
+我保存的帖子（必须是登录状态）</p>
+<p>static void	mySave(android.content.Context context, java.lang.String title)
+我保存的帖子（必须是登录状态）</p>
+<p>static void	mySave(android.content.Context context, java.lang.String userid, java.lang.String username)
+其他用户的个人中心</p>
+<p>static void	postList(android.content.Context context)
+帖子列表</p>
+<p>static void	postList(android.content.Context context, java.lang.String title)
+帖子列表</p>
+<p>static void	reg(android.content.Context context)
+注册</p>
+<p>static void	searchUser(android.content.Context context)
+搜索用户</p>
+<p>static void	searchUser(android.content.Context context, java.lang.String title)
+搜索用户</p>
+<p>static void	showBigImage(android.support.v7.app.AppCompatActivity appCompatActivity, java.lang.String imagePath)
+查看大图页面</p>
+<p>static void	systemNotify(android.content.Context context)
+系统通知</p>
+<p>static void	systemNotify(android.content.Context context, java.lang.String title)
+系统通知</p>
+<p>static void	wx(android.content.Context context)
+微信精选页面</p>
+<p>static void	wx(android.content.Context context, java.lang.String title)
+微信精选页面</p>
+<p>static void	xiaohua(android.content.Context context)
+笑话列表页面（显示默认标题）</p>
+<p>static void	xiaohua(android.content.Context context, java.lang.String title)
+笑话列表页面</p>
 
 <p>10.webview</p>
 <pre>

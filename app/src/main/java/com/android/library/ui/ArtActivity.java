@@ -1,6 +1,7 @@
 package com.android.library.ui;
 
 
+import android.text.TextUtils;
 
 import com.android.library.R;
 import com.android.library.adapter.ArtListAdapter;
@@ -30,7 +31,11 @@ public class ArtActivity extends UIActivity<ActivityArtListBinding> implements P
 
     @Override
     protected void init() {
-        tvTitle.setText("艺术鉴赏");
+        String title = getIntent().getStringExtra("title");
+        if (!TextUtils.isEmpty(title))
+            tvTitle.setText(title);
+        else
+            tvTitle.setText("艺术鉴赏");
         databinding.pullLoadMoreRecyclerView.setStaggeredGridLayout(2);//参数为列数
         adapter = new ArtListAdapter(this);
         databinding.pullLoadMoreRecyclerView.setAdapter(adapter);
@@ -47,7 +52,7 @@ public class ArtActivity extends UIActivity<ActivityArtListBinding> implements P
                     public void onSuccess(Response<String> response) {
                         ArtListModel model = new Gson().fromJson(response.body(), new TypeToken<ArtListModel>() {
                         }.getType());
-                        if(isRefresh){
+                        if (isRefresh) {
                             adapter.clear();
                         }
                         adapter.setData(model);
@@ -65,7 +70,7 @@ public class ArtActivity extends UIActivity<ActivityArtListBinding> implements P
 
     @Override
     public void onLoadMore() {
-        currentPage ++;
+        currentPage++;
         query(false);
     }
 }

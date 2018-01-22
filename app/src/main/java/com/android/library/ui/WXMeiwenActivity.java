@@ -1,5 +1,6 @@
 package com.android.library.ui;
 
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 
@@ -22,7 +23,11 @@ public class WXMeiwenActivity extends RefreshActivity<WXMeiwen.ShowapiResBodyBea
 
     @Override
     protected void init() {
-        tvTitle.setText("微信鸡汤");
+        String title = getIntent().getStringExtra("title");
+        if (!TextUtils.isEmpty(title))
+            tvTitle.setText(title);
+        else
+            tvTitle.setText("微信鸡汤");
         adapter = new WeixinmeiwenAdapter(context);
         super.init();
     }

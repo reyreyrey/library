@@ -1,6 +1,7 @@
 package com.android.library.ui;
 
 import android.content.Intent;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 
@@ -64,7 +65,11 @@ public class ManhuaListActivity extends RefreshActivity<ManhuaModel.ShowapiResBo
 
     @Override
     protected void init() {
-        tvTitle.setText("漫画");
+        String title = getIntent().getStringExtra("title");
+        if (!TextUtils.isEmpty(title))
+            tvTitle.setText(title);
+        else
+            tvTitle.setText("漫画");
         mAdapter = new ManhuaAdapter(context);
         getType();
         super.init();

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.android.library.manager.UIManager;
 import com.android.library.ui.AddPostActivity;
 import com.android.library.ui.LoginActivity;
 import com.android.library.ui.MineActivity;
@@ -12,6 +13,7 @@ import com.android.library.ui.OtherUserActivity;
 import com.android.library.ui.PostListActivity;
 import com.android.library.ui.RegisterActivity;
 import com.android.library.ui.SearchActivity;
+import com.android.library.ui.SystemNotifyActivity;
 
 import module.com.test.R;
 
@@ -43,10 +45,15 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, MineActivity.class));
     }
 
-    public void search(View v){
+    public void search(View v) {
         startActivity(new Intent(this, SearchActivity.class));
     }
-    public void other(View v){
+
+    public void other(View v) {
         OtherUserActivity.seeOtherUser(this, "d9cf9e8c-99d8-de5c-2ab2-10f77cdc8849", "kk");
+    }
+
+    public void notify(View v) {
+        startActivity(new Intent(this, SystemNotifyActivity.class));
     }
 }

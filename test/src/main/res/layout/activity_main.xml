@@ -48,4 +48,11 @@
         android:onClick="other"
         android:text="其他用户页面" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="notify"
+        android:text="系统通知" />
+
+
 </LinearLayout>

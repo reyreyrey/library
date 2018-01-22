@@ -1,5 +1,7 @@
 package com.android.library.ui;
 
+import android.text.TextUtils;
+
 import com.android.library.adapter.TrendChartAdapter;
 import com.android.library.base.RefreshActivity;
 import com.android.library.models.CaiPiaoModel;
@@ -24,7 +26,11 @@ public class TrendChartActivity extends RefreshActivity<CaiPiaoModel.ShowapiResB
 
     @Override
     protected void init() {
-        tvTitle.setText("近期开奖");
+        String title = getIntent().getStringExtra("title");
+        if (!TextUtils.isEmpty(title))
+            tvTitle.setText(title);
+        else
+            tvTitle.setText("近期开奖");
         adapter = new TrendChartAdapter(context);
         super.init();
     }

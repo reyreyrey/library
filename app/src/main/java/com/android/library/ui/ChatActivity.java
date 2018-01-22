@@ -1,8 +1,8 @@
 package com.android.library.ui;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import com.android.library.R;
 import com.android.library.base.UIActivity;
@@ -16,7 +16,7 @@ import com.hyphenate.easeui.ui.EaseChatFragment;
  */
 
 public class ChatActivity extends UIActivity<ActivityChatBinding> {
-    public static void chat(AppCompatActivity appCompatActivity, String chatUserName) {
+    public static void chat(Context appCompatActivity, String chatUserName) {
         Intent intent = new Intent(appCompatActivity, ChatActivity.class);
         intent.putExtra("username", chatUserName);
         appCompatActivity.startActivity(intent);
@@ -25,6 +25,7 @@ public class ChatActivity extends UIActivity<ActivityChatBinding> {
 
     private EaseChatFragment chatFragment;
     private String toChatUsername;
+
     @Override
     protected int getLayoutId() {
         return R.layout.activity_chat;
