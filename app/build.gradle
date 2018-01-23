@@ -81,10 +81,10 @@ android {
     }
 
 /***For Android Studio 3.0+**/
-//    compileOptions {
-//        sourceCompatibility JavaVersion.VERSION_1_8
-//        targetCompatibility JavaVersion.VERSION_1_8
-//    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
 }
 
@@ -135,6 +135,8 @@ dependencies {
     compile dep.goodView
     //高斯模糊
     compile dep.EasyBlur
+
+    compile project(":library")
 }
 
 

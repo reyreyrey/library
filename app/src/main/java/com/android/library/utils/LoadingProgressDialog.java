@@ -2,9 +2,7 @@ package com.android.library.utils;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 
 import com.android.library.R;

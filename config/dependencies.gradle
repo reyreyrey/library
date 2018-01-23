@@ -33,13 +33,22 @@ ext {
     okgo = "3.0.4"
     findBugsJrs305 = "3.0.2"
     okhttp3 = "3.9.0"
+    loggingInterceptorOld = "3.4.1"
     okio = "1.13.0"
     retrofit2 = "2.3.0"
+    retrofit2Old = "2.1.0"
     gson = "2.8.2"
     moshi = "1.5.0"
     rxjava2 = "2.1.6"
     rxandroid2 = "2.0.1"
+
+    rxjava = "1.2.1"
+    rxandroid = "1.1.0"
+
     rxbinding = "2.0.0"
+    autolayout = "1.4.5"
+
+    rxlifecycleComponents = "1.0"
 
     inject = "1"
     javaxAnnotation = "1.3"
@@ -53,6 +62,7 @@ ext {
     permissions = "0.9.4"
     parceler = "1.1.9"
     glide = "3.6.1"
+    glideNew = "3.7.0"
     leakcanary = "1.5.4"
     multidex = "1.0.1"
     phoenix = "2.0.0"
@@ -77,6 +87,7 @@ ext {
     tray = "0.12.0"
 
     logger = "2.1.1"
+    loggerOld = "1.15"
 
     litepal = "1.6.0"
     daemon = "1.2.0"
@@ -108,7 +119,17 @@ ext {
     pullloadmorerecyclerview = "1.1.2"
     goodView = "1.0.0"
     EasyBlur = "v1.0.0"
+    greenrobotEventbus = "3.0.0"
+    glideTransformations = "2.0.1"
+    ultraPtr = "1.0.11"
+    materialishProgress = "1.7"
     dep = [
+            autolayout              : "com.zhy:autolayout:$autolayout",
+            materialishProgress     : "com.pnikosis:materialish-progress:$materialishProgress",
+            ultraPtr                : "in.srain.cube:ultra-ptr:$ultraPtr",
+            glideTransformations    : "jp.wasabeef:glide-transformations:$glideTransformations",
+            greenrobotEventbus      : "org.greenrobot:eventbus:$greenrobotEventbus",
+            rxlifecycleComponents   : "com.trello:rxlifecycle-components:$rxlifecycleComponents",
             EasyBlur                : "com.github.pinguo-zhouwei:EasyBlur:$EasyBlur",
             goodView                : "com.wx.goodview:goodview:$goodView",
             banner                  : "com.youth.banner:banner:$banner",
@@ -127,8 +148,14 @@ ext {
             findBugsJrs305          : "com.google.code.findbugs:jsr305:$findBugsJrs305",
             okhttp3                 : "com.squareup.okhttp3:okhttp:$okhttp3",
             loggingInterceptor      : "com.squareup.okhttp3:logging-interceptor:$okhttp3",
+            loggingInterceptorOld   : "com.squareup.okhttp3:logging-interceptor:$loggingInterceptorOld",
             okio                    : "com.squareup.okio:okio:$okio",
             okgo                    : "com.lzy.net:okgo:$okgo",
+
+            retrofit2old            : "com.squareup.retrofit2:retrofit:$retrofit2Old",
+            converterGson           : "com.squareup.retrofit2:converter-gson:$retrofit2Old",
+            adapterRxjava          : "com.squareup.retrofit2:adapter-rxjava:$retrofit2Old",
+
             retrofit2               : "com.squareup.retrofit2:retrofit:$retrofit2",
             adapterRxjava2          : "com.squareup.retrofit2:adapter-rxjava2:$retrofit2",
             converterMoshi          : "com.squareup.retrofit2:converter-moshi:$retrofit2",
@@ -136,6 +163,8 @@ ext {
             gson                    : "com.google.code.gson:gson:$gson",
             rxjava2                 : "io.reactivex.rxjava2:rxjava:$rxjava2",
             rxandroid2              : "io.reactivex.rxjava2:rxandroid:$rxandroid2",
+            rxjava                  : "io.reactivex:rxjava:$rxjava",
+            rxandroid               : "io.reactivex:rxandroid:$rxandroid",
             autoDispose             : "com.uber.autodispose:autodispose:$autoDispose",
             autoDisposeAndroid      : "com.uber.autodispose:autodispose-android:$autoDispose",
             autoDisposeComponent    : "com.uber.autodispose:autodispose-android-archcomponents:$autoDispose",
@@ -167,6 +196,7 @@ ext {
             multidexInstrumentation : "com.android.support:multidex-instrumentation:$multidex",
             timber                  : "com.jakewharton.timber:timber:$timber",
             glide                   : "com.github.bumptech.glide:glide:$glide",
+            glideNew                : "com.github.bumptech.glide:glide:$glideNew",
             glideProcessor          : "com.github.bumptech.glide:compiler:$glide",
             processPhoenix          : "com.jakewharton:process-phoenix:$phoenix",
             reflection              : "org.jooq:joor:$reflection",
@@ -179,11 +209,11 @@ ext {
             rxbinding               : "com.jakewharton.rxbinding2:rxbinding:$rxbinding",
             jsoup                   : "org.jsoup:jsoup:$jsoup",
             shortcutBadger          : "me.leolin:ShortcutBadger:$shortcutBadger",
-            barlibrary              : "com.gyf.barlibrary:barlibrary:$barlibrary",
             tinker                  : "com.tencent.tinker:tinker-android-lib:$tinker",
             tinkerAnno              : "com.tencent.tinker:tinker-android-anno:$tinker",
             tray                    : "net.grandcentrix.tray:tray:$tray",
             logger                  : "com.orhanobut:logger:$logger",
+            loggerOld                  : "com.orhanobut:logger:$loggerOld",
             litepal                 : "org.litepal.android:core:$litepal",
             daemon                  : "com.evernote:android-job:$daemon",
             jsoup                   : "org.jsoup:jsoup:$jsoup",
