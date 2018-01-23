@@ -46,6 +46,7 @@ public abstract class UIActivity<T extends ViewDataBinding> extends AppCompatAct
             tvBack.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    SoftKeyboardUtils.hideSoftKeyboard(context);
                     finish();
                 }
             });
@@ -74,6 +75,11 @@ public abstract class UIActivity<T extends ViewDataBinding> extends AppCompatAct
             immersionBar.destroy();
     }
 
+    @Override
+    public void finish() {
+        super.finish();
+        SoftKeyboardUtils.hideSoftKeyboard(context);
+    }
 
     protected abstract
     @LayoutRes

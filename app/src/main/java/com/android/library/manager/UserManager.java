@@ -14,10 +14,14 @@ public class UserManager {
 
     public static UserModel getCurrentUser() {
         Object o = SharedPreferencesUtils.readObject(Library.get(), KEY_CURRENT_USER);
-        if (o != null) {
+        if (o != null && !o.equals("")) {
             return (UserModel) o;
         }
         return null;
+    }
+
+    public static void loginOut(){
+        SharedPreferencesUtils.saveObject(Library.get(), KEY_CURRENT_USER, null);
     }
 
     public static boolean isLogin() {

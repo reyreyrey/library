@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.android.library.utils.SoftKeyboardUtils;
+
 
 public abstract class UIBaseFragment<T extends ViewDataBinding> extends Fragment {
     protected boolean isVisible;
@@ -63,7 +65,7 @@ public abstract class UIBaseFragment<T extends ViewDataBinding> extends Fragment
     protected abstract int getContentView();
 
     protected void onInvisible() {
-
+        SoftKeyboardUtils.hideSoftKeyboard(getContext());
     }
 
     protected abstract void init(View view);
