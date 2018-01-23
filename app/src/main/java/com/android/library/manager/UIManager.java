@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.android.library.ui.ArtActivity;
 import com.android.library.ui.ChatActivity;
 import com.android.library.ui.ChatListActivity;
+import com.android.library.ui.CheckUpdateActivity;
 import com.android.library.ui.FuliActivity;
 import com.android.library.ui.GuigushiActivity;
 import com.android.library.ui.LoginActivity;
@@ -20,6 +21,7 @@ import com.android.library.ui.OtherUserActivity;
 import com.android.library.ui.PostListActivity;
 import com.android.library.ui.RegisterActivity;
 import com.android.library.ui.SearchActivity;
+import com.android.library.ui.SettingActivity;
 import com.android.library.ui.SystemNotifyActivity;
 import com.android.library.ui.TrendChartActivity;
 import com.android.library.ui.WXMeiwenActivity;
@@ -443,6 +445,46 @@ public class UIManager {
      */
     public static void lotteryChar1(Context context, String title) {
         Intent intent = new Intent(context, TrendActivity.class);
+        intent.putExtra("title", title);
+        context.startActivity(intent);
+    }
+    /**
+     * 检查更新页面
+     *
+     * @param context 上下文
+     */
+    public static void checkUpdate(Context context) {
+        checkUpdate(context, "");
+    }
+
+    /**
+     * 检查更新页面
+     *
+     * @param context 上下文
+     * @param title   标题
+     */
+    public static void checkUpdate(Context context, String title) {
+        Intent intent = new Intent(context, CheckUpdateActivity.class);
+        intent.putExtra("title", title);
+        context.startActivity(intent);
+    }
+    /**
+     * 设置界面
+     *
+     * @param context 上下文
+     */
+    public static void setting(Context context) {
+        setting(context, "");
+    }
+
+    /**
+     * 设置界面
+     *
+     * @param context 上下文
+     * @param title   标题
+     */
+    public static void setting(Context context, String title) {
+        Intent intent = new Intent(context, SettingActivity.class);
         intent.putExtra("title", title);
         context.startActivity(intent);
     }

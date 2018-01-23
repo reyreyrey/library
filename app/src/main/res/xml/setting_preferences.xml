@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="消息通知">
+        <SwitchPreference
+            android:key="message_var"
+            android:summary="收到消息时是否振动"
+            android:title="振动"
+            android:defaultValue="true"/>
+
+        <SwitchPreference
+            android:key="message_voice"
+            android:summary="收到消息时是否响铃"
+            android:title="提示音"
+            android:defaultValue="true"/>
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="缓存">
+        <SwitchPreference
+            android:key="auto_clear_cache"
+            android:summary="当缓存达到一定数量是自动清理缓存"
+            android:title="自动清理缓存"
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -54,5 +54,22 @@
         android:onClick="notify"
         android:text="系统通知" />
 
+    <TextView
+        android:id="@+id/tv_cache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="notify" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="checkUpdate"
+        android:text="检查更新" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="setting"
+        android:text="设置" />
 
 </LinearLayout>

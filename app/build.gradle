@@ -149,6 +149,8 @@ dependencies {
     compile dep.goodView
     //高斯模糊
     compile dep.EasyBlur
+
+    compile dep.preferenceV14
 /////////////////////////////////////
     //控件
     compile dep.autolayout

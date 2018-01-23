@@ -4,4 +4,5 @@ apply from: '../gradle/common_gradle.gradle'
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(":app")
+//    implementation 'com.github.reyreyrey:library:2.0'
 }

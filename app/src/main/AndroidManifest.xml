@@ -66,6 +66,16 @@
             android:screenOrientation="portrait" />
 
         <activity
+            android:name="com.android.library.ui.CheckUpdateActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.android.library.ui.SettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name="com.android.library.ui.ManhuaDetailActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />

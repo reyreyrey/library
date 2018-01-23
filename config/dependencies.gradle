@@ -124,6 +124,7 @@ ext {
     ultraPtr = "1.0.11"
     materialishProgress = "1.7"
     dep = [
+            preferenceV14           : "com.android.support:preference-v14:$support",
             autolayout              : "com.zhy:autolayout:$autolayout",
             materialishProgress     : "com.pnikosis:materialish-progress:$materialishProgress",
             ultraPtr                : "in.srain.cube:ultra-ptr:$ultraPtr",
