@@ -13,8 +13,8 @@ import com.android.library.ui.PostListActivity;
 import com.android.library.ui.RegisterActivity;
 import com.android.library.ui.SearchActivity;
 
-import cn.xiaolong.ticketsystem.ui.LibraryMainActivity;
 import module.com.test.R;
+import ticketsystem.ui.LibraryMainActivity;
 
 public class MainActivity extends AppCompatActivity {
 

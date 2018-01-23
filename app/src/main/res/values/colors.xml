@@ -21,7 +21,6 @@
     <color name="gray_color">#9b9b9b</color>
     <color name="hui_color">#D4D4D4</color>
     <color name="hui_color_1">#f7f7f7</color>
-    <color name="bg_color">#f1f1f1</color>
     <drawable name="bg_color_drawable">#f1f1f1</drawable>
     <color name="blue_color">#00B1FF</color>
     <color name="blue_click_color">#79d3fb</color>

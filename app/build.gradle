@@ -23,6 +23,20 @@ android {
                 JPUSH_APPKEY : "1", //JPush上注册的包名对应的appkey.
                 JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
         ]
+        buildConfigField("boolean", "DEBUG_LOG", "true")
+        buildConfigField("String", "TICKET_SECRET", TICKET_SECRET)
+        buildConfigField("String", "TICKET_APP_ID", TICKET_APP_ID)
+        buildConfigField("int", "TIME_CLICK_IGNORE", TIME_CLICK_IGNORE)
+        buildConfigField("String", "HOST_URL", HOST_URL)
+        //sp常量
+        buildConfigField("String", "KEY_APP_INFO", KEY_APP_INFO)
+        buildConfigField("String", "KEY_USER_RECORD", KEY_USER_RECORD)
+        buildConfigField("String", "KEY_MY_FOLLOW", KEY_MY_FOLLOW)
+        buildConfigField("String", "DEVICE_ID", DEVICE_ID)
+        buildConfigField("int", "CONNECT_TIMEOUT", CONNECT_TIMEOUT)
+        buildConfigField("int", "WRITE_TIMEOUT", WRITE_TIMEOUT)
+        buildConfigField("int", "READ_TIMEOUT", READ_TIMEOUT)
+        buildConfigField("boolean", "NETWORK_LOG", "true")
     }
 
     dataBinding {
@@ -135,8 +149,38 @@ dependencies {
     compile dep.goodView
     //高斯模糊
     compile dep.EasyBlur
+/////////////////////////////////////
+    //控件
+    compile dep.autolayout
+    // Rx
+    compile dep.rxjava
+    compile dep.rxandroid
+    // Retrofit网络请求
+    compile dep.retrofit2old
+    compile dep.converterGson
+    compile dep.adapterRxjava
+    compile dep.gson
+    compile dep.materialishProgress
+    //ptr
+    compile dep.ultraPtr
+    //glide
+    compile dep.glideNew
+    compile dep.glideTransformations
+    //eventpost
+    compile dep.greenrobotEventbus
+    //okhttp
+    compile dep.loggingInterceptorOld
+    //log
+    compile dep.loggerOld
+    //lifeManager
+    compile dep.rxlifecycleComponents
 
-    compile project(":library")
+    compile dep.appcompat
+    compile dep.recyclerview
+    compile dep.cardview
+    compile dep.design
+    //沉浸式状态栏
+    compile dep.barlibrary
 }
 
 

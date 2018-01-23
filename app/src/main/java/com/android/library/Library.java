@@ -13,15 +13,14 @@ import com.hyphenate.easeui.domain.EaseUser;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
-import com.standards.library.app.AppContext;
-import com.standards.library.app.ReturnCode;
-import com.standards.library.app.ReturnCodeConfig;
-import com.standards.library.cache.DataProvider;
-import com.standards.library.network.NetworkConfig;
-import com.standards.library.util.LogUtil;
+import library.app.AppContext;
+import library.app.ReturnCode;
+import library.app.ReturnCodeConfig;
+import library.cache.DataProvider;
+import library.network.NetworkConfig;
+import library.util.LogUtil;
 
 import cn.jpush.android.api.JPushInterface;
-import cn.xiaolong.ticketsystem.*;
 
 import static com.android.library.utils.Cons.USERINFO_URL;
 
@@ -40,9 +39,9 @@ public class Library {
 
         initEaseUI(app);
         AppContext.getInstance().init(app);
-        LogUtil.init(cn.xiaolong.ticketsystem.BuildConfig.DEBUG_LOG, "lucky");
+        LogUtil.init(BuildConfig.DEBUG_LOG, "lucky");
         DataProvider.init(app);
-        NetworkConfig.setBaseUrl(cn.xiaolong.ticketsystem.BuildConfig.HOST_URL);
+        NetworkConfig.setBaseUrl(BuildConfig.HOST_URL);
         ReturnCodeConfig.getInstance().initReturnCode(ReturnCode.CODE_SUCCESS, ReturnCode.CODE_EMPTY);
     }
 
