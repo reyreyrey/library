@@ -18,6 +18,7 @@ import com.google.gson.reflect.TypeToken;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
+import com.tencent.smtt.sdk.WebSettings;
 import com.wx.goodview.GoodView;
 
 /**
@@ -48,6 +49,7 @@ public class PostDetailActivity extends UIActivity<ActivityPostDetailBinding> im
         databinding.ivSave.setOnClickListener(this);
         databinding.tvCommentCount.setText(post.getComments_count());
         databinding.ivComment.setOnClickListener(this);
+        databinding.wbContent.getWebView().getSettings().setTextSize(WebSettings.TextSize.LARGEST);
         getDetail();
     }
 
@@ -60,8 +62,7 @@ public class PostDetailActivity extends UIActivity<ActivityPostDetailBinding> im
                         String result = response.body();
                         BaseModel<PostDetailModel> baseModel = new Gson().fromJson(result, new TypeToken<BaseModel<PostDetailModel>>() {
                         }.getType());
-                        databinding.wbContent.getWebView().loadDataWithBaseURL(null, baseModel.getData().getContent(), "text/html", "utf-8", null);
-//                        databinding.wbContent.getWebView().loadData(baseModel.getData().getContent(), "text/html", "utf-8");
+                        databinding.wbContent.getWebView().loadDataWithBaseURL(Cons.BASE_URL, baseModel.getData().getContent(), "text/html", "utf-8", null);
                         databinding.ivStar.setImageResource(baseModel.getData().isUserStar() ? R.drawable.ic_zan_detail_success : R.drawable.ic_zan_detail);
                         databinding.ivSave.setImageResource(baseModel.getData().isUserSave() ? R.drawable.ic_save_success : R.drawable.ic_save_detail);
                     }
