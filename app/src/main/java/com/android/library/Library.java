@@ -2,9 +2,10 @@ package com.android.library;
 
 import android.app.Application;
 
+import com.android.library.manager.UserManager;
 import com.android.library.models.BaseModel;
 import com.android.library.models.UserModel;
-import com.android.library.manager.UserManager;
+import com.android.library.utils.activity_manager.ActivityManager;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.hyphenate.chat.EMOptions;
@@ -13,14 +14,14 @@ import com.hyphenate.easeui.domain.EaseUser;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
+
+import cn.jpush.android.api.JPushInterface;
 import library.app.AppContext;
 import library.app.ReturnCode;
 import library.app.ReturnCodeConfig;
 import library.cache.DataProvider;
 import library.network.NetworkConfig;
 import library.util.LogUtil;
-
-import cn.jpush.android.api.JPushInterface;
 
 import static com.android.library.utils.Cons.USERINFO_URL;
 
@@ -36,6 +37,7 @@ public class Library {
         Library.isDebug = isDebug;
         JPushInterface.setDebugMode(isDebug);
         JPushInterface.init(app);
+        ActivityManager.startWatcher(app);
 
         initEaseUI(app);
         AppContext.getInstance().init(app);

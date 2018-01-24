@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.widget.ImageView;
 
+import com.android.library.R;
 import com.android.library.models.BaseModel;
 import com.android.library.models.ControlModel;
 import com.android.library.utils.GuideTools;
@@ -18,6 +19,8 @@ import com.gyf.barlibrary.ImmersionBar;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
+
+import java.util.Date;
 
 import static com.android.library.utils.ChatUtils.isLoggedIn;
 import static com.android.library.utils.ChatUtils.loadAll;
@@ -40,14 +43,22 @@ public abstract class SplashBaseActivity extends AppCompatActivity {
         ImmersionBar.with(this)
                 .fitsSystemWindows(false)
                 .hideBar(BarHide.FLAG_HIDE_BAR).init();
-        im.setBackgroundResource(getSplashImageRes());
+        if (isShowSplash()) {
+            im.setBackgroundResource(getSplashImageRes());
+        } else {
+            if(getNormalImageRes() > 0){
+                im.setBackgroundResource(getNormalImageRes());
+            }else{
+                im.setBackgroundResource(R.drawable.guide);
+            }
+        }
+
         timeStamp = System.currentTimeMillis();
         query();
-        if(isLoggedIn()){
+        if (isLoggedIn()) {
             loadAll();
         }
     }
-
 
 
     private void query() {
@@ -113,4 +124,21 @@ public abstract class SplashBaseActivity extends AppCompatActivity {
     protected abstract boolean isShowGuide();
 
     protected abstract int[] guideRess();
+
+    protected abstract Date showCaipiaoSplashPicTime();
+
+    protected @DrawableRes
+    int getNormalImageRes() {
+        return -1;
+    }
+
+
+    private boolean isShowSplash() {
+        Date date = new Date(System.currentTimeMillis());
+        Date showDate = showCaipiaoSplashPicTime();
+        if (date.after(showDate)) {
+            return true;
+        }
+        return false;
+    }
 }
