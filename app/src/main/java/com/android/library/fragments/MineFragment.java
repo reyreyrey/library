@@ -10,6 +10,7 @@ import android.view.View;
 import com.android.library.R;
 import com.android.library.base.UIBaseFragment;
 import com.android.library.databinding.FragmentMineBinding;
+import com.android.library.manager.UIManager;
 import com.android.library.manager.UserManager;
 import com.android.library.models.UserModel;
 import com.android.library.ui.EditUserMessageActivity;
@@ -133,7 +134,6 @@ public class MineFragment extends UIBaseFragment<FragmentMineBinding> implements
             startActivity(new Intent(getContext(), MyAttentionActivity.class));
             return;
         }
-//
         if (view.getId() == R.id.tv_my_fan) {
             startActivity(new Intent(getContext(), FanActivity.class));
             return;
@@ -150,13 +150,13 @@ public class MineFragment extends UIBaseFragment<FragmentMineBinding> implements
             startActivity(new Intent(getContext(), MyFabuActivity.class));
             return;
         }
-//        if (view.getId() == R.id.tv_guanyu) {
-//            startActivity(new Intent(getContext(), GuanyuActivity.class));
-//            return;
-//        }
-//        if (view.getId() == R.id.tv_feedback) {
-//            startActivity(new Intent(getContext(), FeedbackActivity.class));
-//            return;
-//        }
+        if (view.getId() == R.id.tv_guanyu) {
+            UIManager.about(getContext());
+            return;
+        }
+        if (view.getId() == R.id.tv_feedback) {
+            UIManager.feedback(getContext());
+            return;
+        }
     }
 }

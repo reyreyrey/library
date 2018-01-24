@@ -4,10 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 
+import com.android.library.ui.AboutActivity;
 import com.android.library.ui.ArtActivity;
 import com.android.library.ui.ChatActivity;
 import com.android.library.ui.ChatListActivity;
 import com.android.library.ui.CheckUpdateActivity;
+import com.android.library.ui.FeedbackActivity;
 import com.android.library.ui.FuliActivity;
 import com.android.library.ui.GuigushiActivity;
 import com.android.library.ui.LoginActivity;
@@ -202,7 +204,7 @@ public class UIManager {
      * @param context 上下文
      */
     public static void manhua(Context context) {
-        luck(context, "");
+        manhua(context, "");
     }
 
     /**
@@ -328,6 +330,7 @@ public class UIManager {
         Intent intent = new Intent(context, RegisterActivity.class);
         context.startActivity(intent);
     }
+
     /**
      * 搜索用户
      *
@@ -348,6 +351,7 @@ public class UIManager {
         intent.putExtra("title", title);
         context.startActivity(intent);
     }
+
     /**
      * 系统通知
      *
@@ -368,6 +372,7 @@ public class UIManager {
         intent.putExtra("title", title);
         context.startActivity(intent);
     }
+
     /**
      * 彩票开奖记录
      *
@@ -388,6 +393,7 @@ public class UIManager {
         intent.putExtra("title", title);
         context.startActivity(intent);
     }
+
     /**
      * 微信精选页面
      *
@@ -408,6 +414,7 @@ public class UIManager {
         intent.putExtra("title", title);
         context.startActivity(intent);
     }
+
     /**
      * 走势图
      *
@@ -428,6 +435,7 @@ public class UIManager {
         intent.putExtra("title", title);
         context.startActivity(intent);
     }
+
     /**
      * 走势图2
      *
@@ -448,6 +456,7 @@ public class UIManager {
         intent.putExtra("title", title);
         context.startActivity(intent);
     }
+
     /**
      * 检查更新页面
      *
@@ -468,6 +477,7 @@ public class UIManager {
         intent.putExtra("title", title);
         context.startActivity(intent);
     }
+
     /**
      * 设置界面
      *
@@ -485,6 +495,48 @@ public class UIManager {
      */
     public static void setting(Context context, String title) {
         Intent intent = new Intent(context, SettingActivity.class);
+        intent.putExtra("title", title);
+        context.startActivity(intent);
+    }
+
+    /**
+     * 反馈界面
+     *
+     * @param context 上下文
+     */
+    public static void feedback(Context context) {
+        feedback(context, "");
+    }
+
+    /**
+     * 反馈界面
+     *
+     * @param context 上下文
+     * @param title   标题
+     */
+    public static void feedback(Context context, String title) {
+        Intent intent = new Intent(context, FeedbackActivity.class);
+        intent.putExtra("title", title);
+        context.startActivity(intent);
+    }
+
+    /**
+     * 关于我们界面
+     *
+     * @param context 上下文
+     */
+    public static void about(Context context) {
+        about(context, "");
+    }
+
+    /**
+     * 关于我们界面
+     *
+     * @param context 上下文
+     * @param title   标题
+     */
+    public static void about(Context context, String title) {
+        Intent intent = new Intent(context, AboutActivity.class);
         intent.putExtra("title", title);
         context.startActivity(intent);
     }
