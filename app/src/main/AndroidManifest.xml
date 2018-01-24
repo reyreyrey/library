@@ -42,181 +42,144 @@
     <application android:allowBackup="true">
         <activity
             android:name="com.android.lotto.lottery.LottoTrendActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.android.library.ui.TrendChartActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.android.library.ui.WebViewActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.android.library.ui.GuideActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.android.library.ui.ChatActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.android.library.ui.XiaohuaActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="com.android.library.ui.CheckUpdateActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="com.android.library.ui.SettingActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.android.library.ui.FeedbackActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="com.android.library.ui.AboutActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="com.android.library.ui.ManhuaDetailActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="com.android.library.ui.ManhuaListActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="com.android.library.ui.WXMeiwenActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.android.library.ui.XiaohuaDetailActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="com.android.library.ui.GuigushiActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="com.android.library.ui.PostListActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="com.android.library.ui.RegisterActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="com.android.library.ui.AddPostActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="com.android.library.ui.MyAttentionActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="com.android.library.ui.EditUserMessageActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
 
         <activity
             android:name="com.android.library.ui.OtherUserActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.android.library.ui.SearchActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="com.android.library.ui.MySaveActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.android.library.ui.MyFabuActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.android.library.ui.MineActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.android.library.ui.CommentListActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
 
         <activity
             android:name="com.android.library.ui.LoginActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="com.android.library.ui.PostDetailActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="com.android.library.ui.GuigushiDetailActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="com.android.library.ui.ArtActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="com.android.library.ui.FuliActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
 
         <activity
             android:name="com.android.library.ui.FanActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
 
         <activity
             android:name="com.android.library.ui.SystemNotifyActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
 
         <activity
             android:name="com.android.library.ui.SystemNotifyDetailActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
 
         <activity
             android:name="com.android.trend.ui.TrendActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="com.android.library.ui.LuckPanelActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.android.library.ui.ChatListActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
 
@@ -275,60 +238,46 @@
 
         <activity
             android:name="ticketsystem.ui.LibraryMainActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <activity
             android:name="ticketsystem.ui.follow.FollowAddActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="ticketsystem.ui.follow.FollowSortActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="ticketsystem.ui.trendanalysis.AverageSimulateActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="ticketsystem.ui.OpenResultActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="ticketsystem.ui.trendanalysis.ParityTrendActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="ticketsystem.ui.trendanalysis.AvgAnalysisActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="ticketsystem.ui.trendanalysis.SumAnalysisActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="ticketsystem.ui.trendanalysis.CodeRateActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="ticketsystem.ui.trendanalysis.CodeGenerateActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="ticketsystem.ui.trendanalysis.CodeBaseSelectActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="ticketsystem.ui.trendanalysis.CodeForecastActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="ticketsystem.ui.web.WebActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="ticketsystem.ui.HistoryActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <meta-data

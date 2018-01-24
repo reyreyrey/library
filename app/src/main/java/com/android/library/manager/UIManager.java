@@ -32,6 +32,8 @@ import com.android.library.ui.dialogs.PhotoViewDialog;
 import com.android.lotto.lottery.LottoTrendActivity;
 import com.android.trend.ui.TrendActivity;
 
+import ticketsystem.ui.LibraryMainActivity;
+
 /**
  * String title = getIntent().getStringExtra("title");
  * if (!TextUtils.isEmpty(title))
@@ -538,6 +540,16 @@ public class UIManager {
     public static void about(Context context, String title) {
         Intent intent = new Intent(context, AboutActivity.class);
         intent.putExtra("title", title);
+        context.startActivity(intent);
+    }
+
+    /**
+     * 走势图chart
+     *
+     * @param context 上下文
+     */
+    public static void caipiaoChatHistory(Context context) {
+        Intent intent = new Intent(context, LibraryMainActivity.class);
         context.startActivity(intent);
     }
 }
