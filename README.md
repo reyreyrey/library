@@ -41,7 +41,7 @@
     dependencies {
         compile fileTree(include: ['*.jar'], dir: 'libs')
         //加号替换为jitpack版本号
-        compile 'com.github.xinruzhou:library:+'
+        compile 'com.github.reyreyrey:library:+'
     }
   </code>
 </pre>
