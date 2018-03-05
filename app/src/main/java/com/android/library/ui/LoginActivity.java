@@ -17,8 +17,6 @@ import com.android.library.utils.SoftKeyboardUtils;
 import com.android.library.utils.ToastUtils;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.hyphenate.EMCallBack;
-import com.hyphenate.chat.EMClient;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
@@ -97,49 +95,15 @@ public class LoginActivity extends UIActivity<ActivityLoginBinding> implements V
                         }.getType());
                         if (baseModel.getSuccess() == 1) {
                             UserManager.saveUser(baseModel.getData());
-                            loginChat(username, pwd);
+                            dismissProgress();
+                            ToastUtils.toastSuccess(context, "登录成功！");
+                            finish();
                         } else {
                             dismissProgress();
                             ToastUtils.toastError(context, baseModel.getMsg());
                         }
                     }
                 });
-    }
-
-    private void loginChat(String username, String pwd) {
-        EMClient.getInstance().login(username, pwd, new EMCallBack() {
-
-            @Override
-            public void onSuccess() {
-                runOnUiThread(new Runnable() {
-                    public void run() {
-                        dismissProgress();
-                        ToastUtils.toastSuccess(context, "登录成功！");
-                        finish();
-                    }
-                });
-            }
-
-            @Override
-            public void onProgress(int progress, String status) {
-
-            }
-
-            @Override
-            public void onError(final int code, final String error) {
-                runOnUiThread(new Runnable() {
-                    public void run() {
-                        dismissProgress();
-                        if(code == 200){
-                            ToastUtils.toastSuccess(context, "登录成功！");
-                            finish();
-                            return;
-                        }
-                        ToastUtils.toastSuccess(context, "登录失败！" + error);
-                    }
-                });
-            }
-        });
     }
 
     @Override

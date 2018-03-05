@@ -31,6 +31,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
+import library.util.ToastUtil;
 
 import static com.android.library.utils.Cons.USERINFO_BY_ID_URL;
 import static com.android.library.utils.Cons.USER_ATT_URL;
@@ -157,7 +158,7 @@ public class OtherUserActivity extends UIActivity<ActivityOtherUserBinding> impl
             return;
         }
         if (v.getId() == R.id.tv_chat) {
-            ChatActivity.chat(this, otherUserModel.getUsername());
+            ToastUtil.showToast("敬请期待");
             return;
         }
         if (v.getId() == R.id.img_header) {

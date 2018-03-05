@@ -22,8 +22,6 @@ import com.lzy.okgo.model.Response;
 
 import java.util.Date;
 
-import static com.android.library.utils.ChatUtils.isLoggedIn;
-import static com.android.library.utils.ChatUtils.loadAll;
 import static com.android.library.utils.Cons.CONTROL_URL;
 
 /**
@@ -55,9 +53,6 @@ public abstract class SplashBaseActivity extends AppCompatActivity {
 
         timeStamp = System.currentTimeMillis();
         query();
-        if (isLoggedIn()) {
-            loadAll();
-        }
     }
 
 

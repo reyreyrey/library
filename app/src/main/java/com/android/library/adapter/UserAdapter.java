@@ -15,7 +15,6 @@ import com.android.library.R;
 import com.android.library.manager.UserManager;
 import com.android.library.models.BaseModel;
 import com.android.library.models.UserModel;
-import com.android.library.ui.ChatActivity;
 import com.android.library.utils.ProgressDialogUtils;
 import com.android.library.utils.ToastUtils;
 import com.bumptech.glide.Glide;
@@ -25,6 +24,8 @@ import com.joanzapata.android.QuickAdapter;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
+
+import library.util.ToastUtil;
 
 import static com.android.library.utils.Cons.USER_ATT_URL;
 
@@ -144,6 +145,6 @@ public class UserAdapter extends QuickAdapter<UserModel> {
     }
 
     private void toChat(final UserModel item) {
-        ChatActivity.chat(appCompatActivity, item.getUsername());
+        ToastUtil.showToast("敬请期待");
     }
 }

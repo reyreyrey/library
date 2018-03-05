@@ -132,7 +132,6 @@ dependencies {
 
     compile dep.ListViewBaseAdapter
     compile dep.glide
-    compile dep.hyphenate
     compile dep.circleDialog
     compile dep.acp
 
@@ -177,12 +176,8 @@ dependencies {
     //lifeManager
     compile dep.rxlifecycleComponents
 
-    compile dep.appcompat
     compile dep.recyclerview
     compile dep.cardview
-    compile dep.design
-    //沉浸式状态栏
-    compile dep.barlibrary
 }
 
 

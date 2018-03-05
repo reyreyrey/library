@@ -6,8 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.android.library.ui.AboutActivity;
 import com.android.library.ui.ArtActivity;
-import com.android.library.ui.ChatActivity;
-import com.android.library.ui.ChatListActivity;
 import com.android.library.ui.CheckUpdateActivity;
 import com.android.library.ui.FeedbackActivity;
 import com.android.library.ui.FuliActivity;
@@ -96,24 +94,6 @@ public class UIManager {
         dialog.show(appCompatActivity.getSupportFragmentManager(), "1");
     }
 
-    /**
-     * 与某个用户聊天
-     *
-     * @param context  上下文
-     * @param userName 用户名（不是用户id）
-     */
-    public static void chat(Context context, String userName) {
-        ChatActivity.chat(context, userName);
-    }
-
-    /**
-     * 会话列表 页面
-     *
-     * @param context 上下文
-     */
-    public static void chatList(Context context) {
-        ChatListActivity.chatList(context);
-    }
 
     /**
      * 福利页面（图片瀑布流）

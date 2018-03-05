@@ -8,9 +8,7 @@ import com.android.library.models.UserModel;
 import com.android.library.utils.activity_manager.ActivityManager;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.hyphenate.chat.EMOptions;
-import com.hyphenate.easeui.EaseUI;
-import com.hyphenate.easeui.domain.EaseUser;
+
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
@@ -39,7 +37,7 @@ public class Library {
         JPushInterface.init(app);
         ActivityManager.startWatcher(app);
 
-        initEaseUI(app);
+
         AppContext.getInstance().init(app);
         LogUtil.init(BuildConfig.DEBUG_LOG, "lucky");
         DataProvider.init(app);
@@ -48,25 +46,7 @@ public class Library {
     }
 
 
-    private static void initEaseUI(Application app) {
-        EMOptions options = new EMOptions();
-        options.setAcceptInvitationAlways(true);
-        EaseUI.getInstance().init(app, options);
-        EaseUI.getInstance().setUserProfileProvider(new EaseUI.EaseUserProfileProvider() {
-            @Override
-            public EaseUser getUser(String username) {
-                EaseUser easeUser = new EaseUser(username);
-                UserModel userModel = UserManager.getUser(username);
-                if (userModel != null) {
-                    easeUser.setNickname(userModel.getNickname());
-                    easeUser.setAvatar(userModel.getPhoto());
-                    return easeUser;
-                }
-                requestSaveUserInfo(username);
-                return null;
-            }
-        });
-    }
+
 
     private static Application app;
     private static boolean isDebug;
