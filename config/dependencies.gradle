@@ -21,7 +21,7 @@ ext {
     testRunner = "1.0.1"
     junit = "4.12"
     espresso = "3.0.0"
-    support = "25.3.1"
+    support = "27.0.2"
     mockito = "2.10.0"
     truth = "0.36"
 
