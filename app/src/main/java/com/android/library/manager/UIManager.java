@@ -528,8 +528,9 @@ public class UIManager {
      *
      * @param context 上下文
      */
-    public static void caipiaoChatHistory(Context context) {
+    public static void caipiaoChatHistory(Context context, boolean showBack) {
         Intent intent = new Intent(context, LibraryMainActivity.class);
+        intent.putExtra("showBack", showBack);
         context.startActivity(intent);
     }
 }

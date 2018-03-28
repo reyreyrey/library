@@ -69,5 +69,7 @@ public class LibraryMainActivity extends BaseTitleBarActivity {
     @Override
     public void initTitleBar(BaseTitleBar titleBar) {
         tvTitle = (TextView) titleBar.center;
+        boolean showBack = getIntent().getBooleanExtra("showBack", true);
+        titleBar.setLeftVisible(showBack);
     }
 }
