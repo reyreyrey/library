@@ -2,10 +2,14 @@ package ticketsystem.ui;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
+import android.view.KeyEvent;
 import android.widget.TextView;
 
 import com.android.library.R;
+import com.android.library.utils.ToastUtils;
+import com.android.library.utils.activity_manager.ActivityManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,7 +73,29 @@ public class LibraryMainActivity extends BaseTitleBarActivity {
     @Override
     public void initTitleBar(BaseTitleBar titleBar) {
         tvTitle = (TextView) titleBar.center;
-        boolean showBack = getIntent().getBooleanExtra("showBack", true);
+         showBack = getIntent().getBooleanExtra("showBack", true);
         titleBar.setLeftVisible(showBack);
+    }
+    private boolean showBack;
+    private long backTime;
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(showBack)return super.onKeyDown(keyCode, event);
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if (backTime == 0) {
+                backTime = System.currentTimeMillis();
+                ToastUtils.toastWarn(this, getString(R.string.hybrid_exit_app));
+                return true;
+            }
+            if ((System.currentTimeMillis() - backTime) >= 2000) {
+                backTime = System.currentTimeMillis();
+                ToastUtils.toastWarn(this, getString(R.string.hybrid_exit_app));
+                return true;
+            }
+            ActivityManager.exitApp();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }
