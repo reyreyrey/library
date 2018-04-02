@@ -74,6 +74,10 @@ public class WebViewActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (isShowBack) return super.onKeyDown(keyCode, event);
+        if (progressWebview.getWebView().canGoBack()) {
+            progressWebview.getWebView().goBack();
+            return true;
+        }
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             if (backTime == 0) {
                 backTime = System.currentTimeMillis();
